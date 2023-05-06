@@ -1,0 +1,504 @@
+* {
+    margin: 0%;
+    overflow: hidden;
+    overflow-y: hidden;
+    padding: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth
+}
+
+.signup {
+    @apply pt-[3.75rem] pr-[9.4%] w-[100vw] overflow-hidden
+}
+
+.signup-image {
+    background-image: url(../assets/login.png);
+    @apply bg-no-repeat bg-cover h-[48.81rem] w-[50.31rem]
+}
+
+.signup-container {
+    @apply flex flex-row justify-between mb-[7.56rem]
+}
+
+.det-heading {
+    @apply text-[2.25rem] font-medium leading-[2.5rem]
+}
+
+.det-head {
+    @apply flex flex-col gap-[1.5rem] mb-[3rem]
+}
+
+.det-desc {
+    @apply leading-[1.5rem]
+}
+
+.login-det {
+    @apply flex items-center flex-col justify-center pr-[3rem]
+}
+
+.name {
+    /* @apply border-b-[] */
+    border: none;
+    border-bottom: 0.0625rem solid #000000;
+    outline: none;
+    @apply w-[23.13rem] pb-[0.5rem]
+    /* optional: removes the default focus outline */
+}
+
+.name::placeholder {
+    @apply text-[#000000] opacity-[0.4]
+}
+
+.login-acts {
+    @apply flex flex-col gap-[2.5rem] mb-[2.5rem]
+}
+
+.login-actions {
+    @apply flex flex-col
+}
+
+.accounts {
+    @apply w-[23.19rem] h-[3.5rem] bg-[#DB4444] text-[white] rounded-[0.25rem] mb-[1rem]
+}
+
+.account {
+    border: 0.0625rem solid rgba(0, 0, 0, 0.4);
+    @apply w-[23.19rem] h-[3.5rem] bg-[white] text-[#000000] rounded-[0.25rem] flex justify-center items-center mb-[2rem]
+}
+
+.login-veri {
+    @apply flex flex-col
+}
+
+.gog {
+    @apply ml-[1rem]
+}
+
+.already {
+    opacity: 0.7;
+
+}
+
+.log-in {
+    @apply flex flex-row gap-[1rem] w-[23.19rem] h-[3.5rem] items-center justify-center mb-[3rem]
+}
+
+.log {
+    border-bottom: 0.0625rem solid #000000;
+
+}
+
+.orange-login {
+    @apply w-[8.94rem] h-[3.5rem] text-white bg-[#DB4444] flex items-center justify-center rounded-[0.25rem]
+}
+
+.login-buttons {
+    @apply flex flex-row gap-[5.44rem]
+}
+
+.forgot {
+    @apply text-[#DB4444]
+}
+
+
+
+
+/* handling mobile responsiveness */
+@media (max-width: 767px) {
+
+    .signup {
+        @apply pt-[1.75rem] pr-[0.43rem] h-max items-center justify-center w-[100vw] overflow-hidden
+    }
+
+    .signup-image {
+        background-image: url(../assets/login.png);
+        @apply bg-no-repeat bg-cover h-[48.81rem] w-[50.31rem] hidden
+    }
+
+    .signup-container {
+        @apply flex flex-col justify-center w-[100vw] mb-[4.02rem]
+    }
+
+    .det-heading {
+        @apply text-[1.198rem] font-medium leading-[1.88rem]
+    }
+
+    .det-head {
+        @apply flex flex-col gap-[0.8rem] mb-[1.60rem] justify-center items-center
+    }
+
+    .det-desc {
+        @apply leading-[0.8rem] text-[0.53rem]
+    }
+
+    .login-det {
+        @apply flex items-center flex-col justify-center px-[0rem] w-[100%]
+    }
+
+    .name {
+        /* @apply border-b-[] */
+        border: none;
+        border-bottom: 0.0625rem solid #000000;
+        outline: none;
+        @apply w-[12.31rem] pb-[0.5rem] text-[0.53rem]
+        /* optional: removes the default focus outline */
+    }
+
+    .name::placeholder {
+        @apply text-[#000000] opacity-[0.4] text-[0.5rem]
+    }
+
+    .login-acts {
+        @apply flex flex-col gap-[2.5rem] mb-[2.5rem]
+    }
+
+    .login-actions {
+        @apply flex flex-col
+    }
+
+    .accounts {
+        @apply w-[12.31rem] h-[1.86rem] bg-[#DB4444] text-[white] rounded-[0.25rem] mb-[1rem] self-center text-[0.53em]
+    }
+
+    .account {
+        border: 0.0625rem solid rgba(0, 0, 0, 0.4);
+        @apply w-[12.31rem] h-[1.86rem] bg-[white] text-[#000000] rounded-[0.25rem] flex justify-center items-center mb-[1rem] self-center text-[0.53rem]
+    }
+
+    .login-veri {
+        @apply flex flex-col mt-[0.53rem]
+    }
+
+    .gog {
+        @apply ml-[0.53rem]
+    }
+
+    .already {
+        opacity: 0.7;
+
+    }
+
+    .log-in {
+        @apply flex flex-row gap-[0.53rem] h-[1.86rem] items-center justify-center mt-[0.53rem] text-[0.53rem]
+    }
+
+    .log {
+        border-bottom: 0.0625rem solid #000000;
+
+    }
+
+
+    .log {
+        border-bottom: 0.0625rem solid #000000;
+
+    }
+
+    .orange-login {
+        @apply w-[4.76rem] h-[1.86rem] text-white bg-[#DB4444] flex items-center justify-center rounded-[0.13rem] text-[0.53rem]
+    }
+
+    .login-buttons {
+        @apply flex flex-row gap-[2.9rem]
+    }
+
+    .forgot {
+        @apply text-[#DB4444] text-[0.53rem]
+    }
+
+
+
+
+
+}
+
+/* random shi grid-cols-3 grid */
+
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+
+    .signup {
+        @apply pt-[0.75rem] flex items-center justify-center h-[100vh] w-[100vw] overflow-hidden pr-[0rem]
+    }
+
+    .signup-image {
+        background-image: url(../assets/login.png);
+        @apply bg-no-repeat bg-cover h-[48.81rem] w-[50.31rem] hidden
+    }
+
+    .signup-container {
+        @apply flex items-center justify-center h-[100%] w-[100%]
+    }
+
+    .det-heading {
+        @apply text-[2.25rem] font-medium leading-[1.88rem]
+    }
+
+    .det-head {
+        @apply flex flex-col gap-[1.5rem] mb-[3rem]
+    }
+
+    .det-desc {
+        @apply leading-[1.5rem]
+    }
+
+    .login-det {
+        @apply flex items-center flex-col justify-center pr-[0rem]
+    }
+
+    .name {
+        /* @apply border-b-[] */
+        border: none;
+        border-bottom: 0.0625rem solid #000000;
+        outline: none;
+        @apply w-[23.13rem] pb-[0.5rem]
+        /* optional: removes the default focus outline */
+    }
+
+    .name::placeholder {
+        @apply text-[#000000] opacity-[0.4]
+    }
+
+    .login-acts {
+        @apply flex flex-col gap-[2.5rem] mb-[2.5rem]
+    }
+
+    .login-actions {
+        @apply flex flex-col
+    }
+
+    .accounts {
+        @apply w-[23.19rem] h-[3.5rem] bg-[#DB4444] text-[white] rounded-[0.25rem] mb-[1rem]
+    }
+
+    .account {
+        border: 0.0625rem solid rgba(0, 0, 0, 0.4);
+        @apply w-[23.19rem] h-[3.5rem] bg-[white] text-[#000000] rounded-[0.25rem] flex justify-center items-center mb-[2rem]
+    }
+
+    .login-veri {
+        @apply flex flex-col
+    }
+
+    .gog {
+        @apply ml-[1rem]
+    }
+
+    .already {
+        opacity: 0.7;
+
+    }
+
+    .log-in {
+        @apply flex flex-row gap-[1rem] w-[23.19rem] h-[3.5rem] items-center justify-center mb-[3rem]
+    }
+
+    .log {
+        border-bottom: 0.0625rem solid #000000;
+
+    }
+
+
+
+
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+
+
+    .signup {
+        @apply pt-[2.67rem] pr-[5.99rem] w-[100vw] overflow-hidden
+    }
+
+    .signup-image {
+        background-image: url(../assets/login.png);
+        @apply bg-no-repeat bg-cover h-[34.71rem] w-[35.78rem]
+    }
+
+    .signup-container {
+        @apply flex flex-row justify-between mb-[5.38rem]
+    }
+
+    .det-heading {
+        @apply text-[1.6rem] font-medium leading-[1.34rem]
+    }
+
+    .det-head {
+        @apply flex flex-col gap-[1.07rem] mb-[2.13rem]
+    }
+
+    .det-desc {
+        @apply leading-[1.07rem]
+    }
+
+    .login-det {
+        @apply flex items-center flex-col justify-center pr-[2.13rem]
+    }
+
+    .name {
+        /* @apply border-b-[] */
+        border: none;
+        border-bottom: 0.0625rem solid #000000;
+        outline: none;
+        @apply w-[16.45rem] pb-[0.5rem]
+        /* optional: removes the default focus outline */
+    }
+
+    .name::placeholder {
+        @apply text-[#000000] opacity-[0.4]
+    }
+
+    .login-acts {
+        @apply flex flex-col gap-[1.78rem] mb-[1.78rem]
+    }
+
+    .login-actions {
+        @apply flex flex-col
+    }
+
+    .accounts {
+        @apply w-[16.49rem] h-[2.49rem] bg-[#DB4444] text-[white] rounded-[0.25rem] mb-[0.71rem]
+    }
+
+    .account {
+        border: 0.0625rem solid rgba(0, 0, 0, 0.4);
+        @apply w-[16.49rem] h-[2.49rem] bg-[white] text-[#000000] rounded-[0.25rem] flex justify-center items-center mb-[1.42rem]
+    }
+
+    .login-veri {
+        @apply flex flex-col
+    }
+
+    .gog {
+        @apply ml-[0.71rem]
+    }
+
+    .already {
+        opacity: 0.7;
+
+    }
+
+    .log-in {
+        @apply flex flex-row gap-[0.71rem] w-[16.49rem] h-[2.49rem] items-center justify-center mb-[2.13rem]
+    }
+
+    .log {
+        border-bottom: 0.0625rem solid #000000;
+
+    }
+
+    .orange-login {
+        @apply w-[6.04rem] h-[2.49rem] text-white bg-[#DB4444] flex items-center justify-center rounded-[0.25rem]
+    }
+
+    .login-buttons {
+        @apply flex flex-row gap-[3.87rem]
+    }
+
+    .forgot {
+        @apply text-[#DB4444]
+    }
+
+
+
+}
+
+
+/* @media only screen and (min-width: 1440px) {
+
+    .signup {
+        @apply pt-[6.67em] pr-[14.99rem] w-[100vw] overflow-hidden
+    }
+
+    .signup-image {
+        background-image: url(../assets/login.png);
+        @apply bg-no-repeat bg-cover h-[86.8rem] w-[89.44rem]
+    }
+
+    .signup-container {
+        @apply flex flex-row justify-between mb-[13.44rem]
+    }
+
+    .det-heading {
+        @apply text-[4.44rem] font-medium leading-[4.44rem]
+    }
+
+    .det-head {
+        @apply flex flex-col gap-[2.67rem] mb-[5.3rem]
+    }
+
+    .det-desc {
+        @apply leading-[2.67rem] text-[1.78rem]
+    }
+
+    .login-det {
+        @apply flex items-center flex-col justify-center pr-[5.33rem]
+    }
+
+    .name {
+        border: none;
+        border-bottom: 0.0625rem solid #000000;
+        outline: none;
+        @apply w-[41.12rem] pb-[0.89rem] text-[1.78rem]
+    }
+
+    .name::placeholder {
+        @apply text-[#000000] opacity-[0.4]
+    }
+
+    .login-acts {
+        @apply flex flex-col gap-[4.4rem] mb-[4.44rem]
+    }
+
+    .login-actions {
+        @apply flex flex-col
+    }
+
+    .accounts {
+        @apply w-[41.23rem] h-[6.22rem] bg-[#DB4444] text-[white] rounded-[0.44rem] mb-[1.78rem] text-[1.78rem]
+    }
+
+    .account {
+        border: 0.0625rem solid rgba(0, 0, 0, 0.4);
+        @apply w-[41.23rem] h-[6.22rem] bg-[white] text-[#000000] rounded-[0.44rem] flex justify-center items-center mb-[3.56rem] text-[1.78rem]
+    }
+
+    .login-veri {
+        @apply flex flex-col
+    }
+
+    .gog {
+        @apply ml-[1.78rem]
+    }
+
+    .already {
+        opacity: 0.7;
+        @apply text-[1.78rem]
+    }
+
+    .log-in {
+        @apply flex flex-row gap-[1.78rem] w-[41.23rem] h-[6.22rem] items-center justify-center mb-[5.33rem] text-[1.78rem]
+    }
+
+    .log {
+        border-bottom: 0.0625rem solid #000000;
+
+    }
+
+    .orange-login {
+        @apply w-[15.9rem] h-[6.2rem] text-white bg-[#DB4444] flex items-center justify-center rounded-[0.44rem]
+    }
+
+    .login-buttons {
+        @apply flex flex-row gap-[9.67rem]
+    }
+
+    .forgot {
+        @apply text-[#DB4444]
+    }
+
+
+
+
+} */

@@ -1,0 +1,354 @@
+.footer {
+    @apply h-[27.5rem] bg-[black] text-[white]
+}
+
+.footer-det {
+    @apply flex flex-wrap flex-row gap-[5.44rem] justify-center mt-[5rem] mx-[8.44rem]
+}
+
+.foot-head {
+    @apply text-[1.25rem] leading-[1.75rem] font-bold mb-[1.5rem]
+}
+
+.sub-foot {
+    @apply font-medium text-[1.25rem] leading-[1.75rem] mb-[1.5rem]
+}
+
+.foot-col-2 {
+    @apply flex flex-col gap-[1rem]
+}
+
+.form-foot {
+    border: 0.094rem solid #FAFAFA;
+    @apply flex bg-transparent rounded-[0.25rem] w-[13.56rem] h-[3rem] px-[0.75rem] items-center
+}
+
+.foot-search-input::placeholder {
+    @apply text-[white] opacity-[0.5]
+}
+
+.foot-search-input {
+
+    @apply bg-transparent w-[8.125rem]
+}
+
+.foot-send-icon {
+    @apply h-[1.5rem] w-[1.5rem] ml-[2rem]
+}
+
+.foot-si {
+    @apply h-[1.5rem] w-[1.5rem]
+}
+
+.foot-search-input:focus {
+    border: none;
+    outline: none;
+}
+
+.sub-p-2 {
+    @apply text-[0.75rem] font-medium leading-[1.125rem] opacity-[0.7]
+}
+
+.sub-p {
+    @apply text-[1rem] font-normal leading-[1.5rem]
+}
+
+.foot-qr {
+    @apply flex flex-row
+}
+
+.qr-code {
+    @apply h-[4.75rem] w-[4.75rem]
+}
+
+.stores {
+    @apply flex flex-col gap-[0.44rem] ml-[0.69rem]
+}
+
+.social-media {
+    @apply flex flex-row gap-[1.5rem] mt-[0.5rem]
+}
+
+.handles {
+    @apply h-[1.5rem] w-[1.5rem]
+}
+
+.copyright {
+    border-top: 1px solid white;
+    @apply mt-[3.75rem] h-[2.5rem] w-[100vw] flex items-end justify-center
+}
+
+.copy-right {
+    @apply mr-[0.38rem]
+}
+
+@media (max-width: 767px) {
+
+    .footer {
+        @apply bg-[black] text-[white] h-fit pb-[0.8rem]
+    }
+
+    .footer-det {
+        @apply flex flex-col gap-[2.44rem] justify-center mt-[0.53rem] mx-[0.77rem] items-center
+    }
+
+    .foot-col {
+        @apply text-center
+    }
+
+    .foot-head {
+        @apply text-[1.2rem] leading-[1.75rem] font-bold mb-[1rem]
+    }
+
+    .sub-foot {
+        @apply font-medium text-[1.2rem] leading-[1.75rem] mb-[1rem]
+    }
+
+    .foot-col-2 {
+        @apply flex flex-col gap-[1rem]
+    }
+
+    .form-foot {
+        border: 0.094rem solid #FAFAFA;
+        @apply flex bg-transparent rounded-[0.25rem] w-[13.56rem] h-[3rem] px-[0.75rem] items-center
+    }
+
+    .foot-search-input::placeholder {
+        @apply text-[white] opacity-[0.5]
+    }
+
+    .foot-search-input {
+
+        @apply bg-transparent w-[8.125rem]
+    }
+
+    .foot-send-icon {
+        @apply h-[1.5rem] w-[1.5rem] ml-[2rem]
+    }
+
+    .foot-si {
+        @apply h-[1.5rem] w-[1.5rem]
+    }
+
+    .foot-search-input:focus {
+        border: none;
+        outline: none;
+    }
+
+    .sub-p-2 {
+        @apply text-[0.75rem] font-medium leading-[1.125rem] opacity-[0.7]
+    }
+
+    .sub-p {
+        @apply text-[1rem] font-normal leading-[1.5rem]
+    }
+
+    .foot-qr {
+        @apply flex flex-row
+    }
+
+    .qr-code {
+        @apply h-[4.75rem] w-[4.75rem]
+    }
+
+    .stores {
+        @apply flex flex-col gap-[0.44rem] ml-[0.69rem]
+    }
+
+    .social-media {
+        @apply flex flex-row gap-[1.5rem] mt-[0.5rem]
+    }
+
+    .handles {
+        @apply h-[1.5rem] w-[1.5rem]
+    }
+
+    .copyright {
+        border-top: 1px solid white;
+        @apply mt-[3.75rem] h-[2.5rem] w-[100vw] flex items-end justify-center text-[0.8rem]
+    }
+
+    .copy-right {
+        @apply mr-[0.38rem]
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .footer {
+        @apply h-fit bg-[black] text-[white]
+    }
+
+    .footer-det {
+        @apply flex flex-wrap gap-[1.44rem] mt-[5rem] mx-[2.44rem]
+    }
+
+    .foot-head {
+        @apply text-[1.25rem] leading-[1.75rem] font-bold mb-[1.5rem]
+    }
+
+    .sub-foot {
+        @apply font-medium text-[1.25rem] leading-[1.75rem] mb-[1.5rem]
+    }
+
+    .foot-col-2 {
+        @apply flex flex-col gap-[1rem]
+    }
+
+    .form-foot {
+        border: 0.094rem solid #FAFAFA;
+        @apply flex bg-transparent rounded-[0.25rem] w-[13.56rem] h-[3rem] px-[0.75rem] items-center
+    }
+
+    .foot-search-input::placeholder {
+        @apply text-[white] opacity-[0.5]
+    }
+
+    .foot-search-input {
+
+        @apply bg-transparent w-[8.125rem]
+    }
+
+    .foot-send-icon {
+        @apply h-[1.5rem] w-[1.5rem] ml-[2rem]
+    }
+
+    .foot-si {
+        @apply h-[1.5rem] w-[1.5rem]
+    }
+
+    .foot-search-input:focus {
+        border: none;
+        outline: none;
+    }
+
+    .sub-p-2 {
+        @apply text-[0.75rem] font-medium leading-[1.125rem] opacity-[0.7]
+    }
+
+    .sub-p {
+        @apply text-[1rem] font-normal leading-[1.5rem]
+    }
+
+    .foot-qr {
+        @apply flex flex-row
+    }
+
+    .qr-code {
+        @apply h-[4.75rem] w-[4.75rem]
+    }
+
+    .stores {
+        @apply flex flex-col gap-[0.44rem] ml-[0.69rem]
+    }
+
+    .social-media {
+        @apply flex flex-row gap-[1.5rem] mt-[0.5rem]
+    }
+
+    .handles {
+        @apply h-[1.5rem] w-[1.5rem]
+    }
+
+    .copyright {
+        border-top: 1px solid white;
+        @apply mt-[3.75rem] h-[2.5rem] w-[100vw] flex items-end justify-center
+    }
+
+    .copy-right {
+        @apply mr-[0.38rem]
+    }
+
+
+
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+
+    .footer {
+        @apply h-fit bg-[black] text-[white]
+    }
+
+    .footer-det {
+        @apply flex flex-row gap-[3.87rem] justify-center mt-[3.56rem] mx-[6rem]
+    }
+
+    .foot-head {
+        @apply text-[0.89rem] leading-[1.24rem] font-bold mb-[1.07rem]
+    }
+
+    .sub-foot {
+        @apply font-medium text-[0.89rem] leading-[1.24rem] mb-[1.07rem]
+    }
+
+    .foot-col-2 {
+        @apply flex flex-col gap-[0.71rem]
+    }
+
+    .form-foot {
+        border: 0.094rem solid #FAFAFA;
+        @apply flex bg-transparent rounded-[0.25rem] w-[9.643rem] h-[2.13rem] px-[0.53rem] items-center
+    }
+
+    .foot-search-input::placeholder {
+        @apply text-[white] opacity-[0.5]
+    }
+
+    .foot-search-input {
+
+        @apply bg-transparent w-[5.78rem]
+    }
+
+    .foot-send-icon {
+        @apply h-[1.07rem] w-[1.07rem] ml-[1.42rem]
+    }
+
+    .foot-si {
+        @apply h-[1.07rem] w-[1.07rem]
+    }
+
+    .foot-search-input:focus {
+        border: none;
+        outline: none;
+    }
+
+    .sub-p-2 {
+        @apply text-[0.75rem] font-medium leading-[1.125rem] opacity-[0.7]
+    }
+
+    .sub-p {
+        @apply text-[1rem] font-normal leading-[1.5rem]
+    }
+
+    .foot-qr {
+        @apply flex flex-row
+    }
+
+    .qr-code {
+        @apply h-[3.38rem] w-[3.38rem]
+    }
+
+    .stores {
+        @apply flex flex-col gap-[0.31rem] ml-[0.49rem]
+    }
+
+    .social-media {
+        @apply flex flex-row gap-[1.07rem] mt-[0.36rem]
+    }
+
+    .handles {
+        @apply h-[1.07rem] w-[1.07rem]
+    }
+
+    .copyright {
+        border-top: 1px solid white;
+        @apply mt-[2.67rem] h-[1.78rem] w-[100vw] flex items-end justify-center
+    }
+
+    .copy-right {
+        @apply mr-[0.27rem]
+    }
+
+}

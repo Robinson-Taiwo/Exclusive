@@ -1,0 +1,92 @@
+* {
+    margin: 0%;
+    overflow: hidden;
+    padding: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth
+}
+
+.home {
+    @apply h-[100vh]
+}
+
+.home-1 {
+    @apply flex flex-row h-[24rem] px-[9.38%] mb-[8.75rem]
+}
+
+.choose {
+    @apply flex flex-col gap-[1rem] pt-[2.5rem] w-[15.1%]
+}
+
+.p-choose {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    @apply leading-[1.5rem] text-[1rem]
+}
+
+.first-row {
+    @apply pr-[1rem]
+}
+
+.v-line {
+    border: 0.0312rem solid black;
+    opacity: 0.3;
+    @apply ml-[3.125%]
+}
+
+.advert {
+    background-image: url(../assets/ad.png);
+    @apply h-[21.5rem] w-[76.24%] ml-[3.125%] mt-[2.5rem] bg-[black] bg-cover bg-center bg-no-repeat
+}
+
+.home-2 {
+    @apply flex flex-col pl-[9.38%]
+}
+
+.small-orange {
+    @apply w-[1.25rem] h-[2.5rem] bg-[#DB4444] rounded-[0.25rem]
+}
+
+.sub-head {
+    @apply flex flex-row items-center gap-[1rem] font-semibold leading-[1.5rem] text-[#DB4444] mb-[1.5rem]
+}
+
+.big-head {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    @apply text-[2.25rem] font-semibold flex flex-row gap-[5.43rem] items-center
+}
+
+.d-time {
+    @apply flex flex-row gap-[1rem]
+}
+
+.days {
+    @apply flex flex-col
+}
+
+.hours {
+    @apply flex flex-col
+}
+
+.mins {
+    @apply flex flex-col
+}
+
+.seconds {
+    @apply flex flex-col
+}
+
+.mins-text {
+    @apply text-[1rem]
+}
+
+.days-text {
+    @apply text-[1rem]
+}
+
+.hours-text {
+    @apply text-[1rem]
+}
+
+.seconds-text {
+    @apply text-[1rem]
+}
