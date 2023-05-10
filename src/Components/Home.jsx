@@ -1,10 +1,30 @@
 import React, { useState, useEffect } from 'react';
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 import PageLayout from './PageLayout'
+import images from "./data"
+import pic1 from "../assets/pic1.jpg"
+import pic2 from "../assets/pic2.jpg"
+import pic3 from "../assets/pic3.jpg"
+import pic4 from "../assets/pic4.jpg"
+import pic5 from "../assets/pic5.jpg"
+import pic6 from "../assets/pic6.jpg"
+import pic7 from "../assets/pic7.jpg"
+
 import "./Home.css"
 
 const Home = () => {
 
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true
+  };
 
   const threeDaysInSeconds = 345600;
   const [timeLeft, setTimeLeft] = useState(threeDaysInSeconds);
@@ -84,9 +104,46 @@ const Home = () => {
 
 
 
-          <div className="advert">
+          <Slider {...settings} className="advert" >
 
-          </div>
+            <div className="ads1">
+              {/* <img src={pic1} alt="" className="ads" /> */}
+
+            </div>
+
+            <div className="ads2">
+              {/* <img src={pic2} alt="" className="ads" /> */}
+
+            </div>
+
+            <div className="ads3">
+              {/* <img src={pic3} alt="" className="ads" /> */}
+
+            </div>
+
+            <div className="ads4">
+              {/* <img src={pic4} alt="" className="ads" /> */}
+
+            </div>
+
+            <div className="ads5">
+              {/* <img src={pic5} alt="" className="ads" /> */}
+
+            </div>
+
+            <div className="ads6">
+              {/* <img src={pic6} alt="" className="ads" /> */}
+
+            </div>
+
+            <div className="ads7">
+              {/* <img src={pic1} alt="" className="ads" /> */}
+
+            </div>
+
+
+
+          </Slider>
 
 
 

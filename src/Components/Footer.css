@@ -82,7 +82,7 @@
     @apply mr-[0.38rem]
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
 
     .footer {
         @apply bg-[black] text-[white] h-fit pb-[0.8rem]
@@ -101,7 +101,7 @@
     }
 
     .sub-foot {
-        @apply font-medium text-[1.2rem] leading-[1.75rem] mb-[1rem]
+        @apply font-medium text-[1rem] leading-[1.75rem] mb-[1rem]
     }
 
     .foot-col-2 {

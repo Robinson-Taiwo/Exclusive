@@ -11,6 +11,10 @@
     @apply h-[5.75rem] border-2 flex pl-[9.38%] pr-[9.38%] justify-between
 }
 
+.mobile-white-nav {
+    @apply h-[5.75rem] border-2 flex pl-[9.38%] pr-[9.38%] justify-between hidden
+}
+
 .mid-nav {
     @apply flex flex-row h-[2.38rem] mt-[2.5rem] justify-between w-[100%]
 }
@@ -18,6 +22,10 @@
 .logo {
     @apply font-bold text-[1.5rem] leading-[1.5rem]
 }
+
+/* .menu {
+    @apply 
+} */
 
 .nav-links {
     @apply gap-[3rem] flex
@@ -71,51 +79,79 @@
     @apply p-[0.43rem] flex items-center justify-center
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1439px) {
 
-    .Navbar-container {
-        @apply h-[6.22rem] w-[100vw] flex flex-col
+
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 14px;
     }
 
-    .black-nav {
-        border-bottom: 0.031rem solid #000000;
-        @apply h-[2.13rem] w-[100vw] bg-[black] flex justify-center items-center text-[white]
+    .Navbar-container {
+        @apply h-fit w-[100vw] flex flex-col
     }
 
     .white-nav {
-        @apply h-[5.75rem] border-2 flex pl-[6.00rem] pr-[6.00rem] justify-between items-center
+        @apply h-[5.75rem] border-2 flex pl-[9.38%] pr-[9.38%] justify-between hidden
+    }
+
+
+    .black-nav {
+        border-bottom: 0.031rem solid #000000;
+        @apply h-[3rem] w-[100vw] bg-[black] flex justify-center items-center text-[white] text-[0.75rem] text-center
+    }
+
+
+    .nav-icons {
+        @apply flex flex-row gap-[0.2rem]
+    }
+
+
+    .nav-icons-hide {
+        @apply flex flex-row gap-[0.5rem] hidden
+    }
+
+    .mobile-white-nav {
+        @apply h-[5.75rem] border-2 flex pl-[4.38%] pr-[4.38%] flex-col
+    }
+
+    .mobile-first-logo {
+        @apply flex flex-row gap-[0.75rem]
+    }
+
+    .mid-nav {
+        @apply flex flex-row h-[80%] mt-[0rem] items-center justify-between w-[100%]
+    }
+
+    .menu {
+        @apply h-[1.5rem] w-[1.5rem]
+    }
+
+    .menu-logo {
+        @apply  absolute  h-[1.5rem] w-[1.5rem] left-[3rem] top-[2.5rem]
     }
 
     .logo {
-        @apply font-bold text-[1.07rem] leading-[1.07rem]
-    }
-
-    .nav-links {
-        @apply gap-[2.13rem] flex
-    }
-
-    .nav-link {
-        @apply leading-[1.07rem] font-normal
+        @apply font-bold text-[1.2rem] leading-[1rem]
     }
 
     .form {
-        @apply flex bg-[#f5f5f5] pt-[0.31rem] pb-[0.31rem] pl-[0.89rem] pr-[0.53rem] rounded-[0.18rem]
+        @apply flex bg-[#f5f5f5] pt-[0.43rem] pb-[0.43rem] pl-[1.25rem] pr-[0.75rem] rounded-[1.25rem] items-center w-[100%] justify-between
     }
 
     .search-input::placeholder {
-        @apply text-[#000000] opacity-[0.5]
+        @apply text-[#000000] opacity-[0.5] leading-[1.5rem]
     }
 
     .search-input {
-        @apply bg-[#f5f5f5] w-[6.8] h-[1.16rem]
+        @apply bg-[#f5f5f5] w-[9.5625] h-[0.9rem] leading-[1rem]
     }
 
     .search-icon {
-        @apply bg-[#f5f5f5] h-[1.07rem] w-[1.07rem]
+        @apply bg-[#f5f5f5] h-[1.5rem] w-[1.5rem] text-[0.75rem]
     }
 
     .si {
-        @apply h-[1.07rem] w-[1.07rem]
+        @apply h-[1.5rem] w-[1.5rem]
     }
 
     .search-input:focus {
@@ -123,54 +159,114 @@
         outline: none;
     }
 
-
-}
-
-
-
-@media (max-width: 767px) {
-
-    .black-nav {
-        border-bottom: 0.031rem solid #000000;
-        @apply h-[1.6rem] w-[100vw] bg-[black] flex justify-center text-center items-center text-[white] text-[0.53rem]
+    .icon {
+        @apply h-[1.5rem] w-[1.5rem]
     }
 
-
-
-    .white-nav {
-        @apply h-[3.1rem] border-2 flex pl-[1.1rem] pr-[1.44rem] justify-between
-    }
-
-    .logo {
-        @apply font-bold text-[0.8rem] leading-[0.8rem]
-    }
 
     .nav-links {
         @apply gap-[3rem] flex hidden
     }
 
+
+    /* .show-mobile-menu {
+        transition: all 0.5s ease-out;
+        @apply absolute block w-[100vw] h-[100vw] bg-[black] top-[3rem] left-[0rem] opacity-100
+    } */
+
+
+    .show-mobile-menu {
+        position: fixed;
+        top: 3rem;
+        left: 0;
+        width: 90%;
+        height: 100%;
+        background-color: red;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       @apply flex-col
+    }
+
     .nav-link {
-        @apply leading-[1.5rem] font-normal
+        @apply text-[white] p-[2rem] text-center
+    }
+
+
+    .third-row {
+        @apply flex h-[100%] justify-center
+    }
+
+
+
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    .Navbar-container {
+        @apply h-fit w-[100vw] flex flex-col
+    }
+
+    .white-nav {
+        @apply h-[5.75rem] border-2 flex pl-[9.38%] pr-[9.38%] justify-between hidden
+    }
+
+
+    .black-nav {
+        border-bottom: 0.031rem solid #000000;
+        @apply h-[3rem] w-[100vw] bg-[black] flex justify-center items-center text-[white] text-[0.75rem] text-center
+    }
+
+
+    .nav-icons {
+        @apply flex flex-row gap-[0.2rem]
+    }
+
+
+    .nav-icons-hide {
+        @apply flex flex-row gap-[0.5rem] hidden
+    }
+
+    .mobile-white-nav {
+        @apply h-[5.75rem] border-2 flex pl-[4.38%] pr-[4.38%] flex-col
+    }
+
+    .mobile-first-logo {
+        @apply flex flex-row gap-[0.75rem]
+    }
+
+    .mid-nav {
+        @apply flex flex-row h-[80%] mt-[0rem] items-center justify-between w-[100%]
+    }
+
+    .menu {
+        @apply h-[1.5rem] w-[1.5rem]
+    }
+
+    .logo {
+        @apply font-bold text-[1.2rem] leading-[1rem]
     }
 
     .form {
-        @apply flex bg-[#f5f5f5] pt-[0.22rem] pb-[0.22rem] pl-[0.67rem] pr-[0.40rem] rounded-[0.13rem]
+        @apply flex bg-[#f5f5f5] pt-[0.43rem] pb-[0.43rem] pl-[1.25rem] pr-[0.75rem] rounded-[1.25rem] items-center w-[100%] justify-between
     }
 
     .search-input::placeholder {
-        @apply text-[#000000] opacity-[0.5] text-[0.53rem]
+        @apply text-[#000000] opacity-[0.5] leading-[1.5rem]
     }
 
     .search-input {
-        @apply bg-[#f5f5f5] w-[5.09rem] h-[0.87rem] text-[0.53rem]
+        @apply bg-[#f5f5f5] w-[9.5625] h-[0.9rem] leading-[1rem]
     }
 
     .search-icon {
-        @apply bg-[#f5f5f5] h-[0.8rem] w-[0.8rem]
+        @apply bg-[#f5f5f5] h-[1.5rem] w-[1.5rem] text-[0.75rem]
     }
 
     .si {
-        @apply h-[0.8rem] w-[0.8rem]
+        @apply h-[1.5rem] w-[1.5rem]
     }
 
     .search-input:focus {
@@ -178,10 +274,23 @@
         outline: none;
     }
 
+    .icon {
+        @apply h-[1.5rem] w-[1.5rem]
+    }
+
+
+    .nav-links {
+        @apply gap-[3rem] flex hidden
+    }
+
+    .third-row {
+        @apply flex h-[100%] justify-center
+    }
+
 }
 
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 992px) and (max-width: 1199px) {
 
     .Navbar-container {
         @apply h-[8.75rem] w-[100vw] flex flex-col
@@ -193,12 +302,114 @@
     }
 
     .white-nav {
-        @apply h-[5.75rem] border-2 flex pl-[1.44rem] pr-[1.44rem] justify-between items-center
+        @apply h-[5.75rem] border-2 flex pl-[4.38%] pr-[4.38%] justify-between
+    }
+
+    .mobile-white-nav {
+        @apply h-[5.75rem] border-2 flex pl-[9.38%] pr-[9.38%] justify-between hidden
+    }
+
+
+
+    .mid-nav {
+        @apply flex flex-row h-[2.5rem] mt-[2rem] justify-between w-[100%] items-center
     }
 
     .logo {
         @apply font-bold text-[1.5rem] leading-[1.5rem]
     }
+
+    /* .menu {
+        @apply 
+    } */
+
+    .nav-links {
+        @apply gap-[2rem] flex
+    }
+
+    .nav-link {
+        @apply leading-[1.5rem] font-normal text-[1rem]
+    }
+
+    .form {
+        @apply flex bg-[#f5f5f5] pt-[0.43rem] pb-[0.43rem] pl-[1.25rem] pr-[0.75rem] rounded-[0.25rem]
+    }
+
+    .search-input::placeholder {
+        @apply text-[#000000] opacity-[0.5]
+    }
+
+    .search-input {
+        @apply bg-[#f5f5f5] w-[7.5625] h-[1.5rem]
+    }
+
+    .search-icon {
+        @apply bg-[#f5f5f5] h-[1.5rem] w-[1.5rem]
+    }
+
+    .si {
+        @apply h-[1.5rem] w-[1.5rem]
+    }
+
+    .search-input:focus {
+        border: none;
+        outline: none;
+    }
+
+    .third-row {
+        @apply flex flex-row gap-[1.5rem]
+    }
+
+
+    .nav-icons {
+        @apply flex flex-row gap-[1rem]
+    }
+
+
+    .nav-icons-hide {
+        @apply flex flex-row gap-[1rem] hidden
+    }
+
+
+    .one-icon {
+        @apply p-[0.43rem] flex items-center justify-center
+    }
+
+
+
+}
+
+
+@media screen and (min-width: 1200px) {
+
+    .Navbar-container {
+        @apply h-[8.75rem] w-[100vw] flex flex-col
+    }
+
+    .black-nav {
+        border-bottom: 0.031rem solid #000000;
+        @apply h-[3rem] w-[100vw] bg-[black] flex justify-center items-center text-[white]
+    }
+
+    .white-nav {
+        @apply h-[5.75rem] border-2 flex pl-[9.38%] pr-[9.38%] justify-between
+    }
+
+    .mobile-white-nav {
+        @apply h-[5.75rem] border-2 flex pl-[9.38%] pr-[9.38%] justify-between hidden
+    }
+
+    .mid-nav {
+        @apply flex flex-row h-[2.38rem] mt-[2.5rem] justify-between w-[100%]
+    }
+
+    .logo {
+        @apply font-bold text-[1.5rem] leading-[1.5rem]
+    }
+
+    /* .menu {
+        @apply 
+    } */
 
     .nav-links {
         @apply gap-[3rem] flex
@@ -209,7 +420,7 @@
     }
 
     .form {
-        @apply flex bg-[#f5f5f5] pt-[0.43rem] pb-[0.43rem] pl-[1.25rem] pr-[0.75rem] rounded-[0.25rem] hidden
+        @apply flex bg-[#f5f5f5] pt-[0.43rem] pb-[0.43rem] pl-[1.25rem] pr-[0.75rem] rounded-[0.25rem]
     }
 
     .search-input::placeholder {
@@ -232,6 +443,26 @@
         border: none;
         outline: none;
     }
+
+    .third-row {
+        @apply flex flex-row gap-[1.5rem]
+    }
+
+
+    .nav-icons {
+        @apply flex flex-row gap-[1rem]
+    }
+
+
+    .nav-icons-hide {
+        @apply flex flex-row gap-[1rem] hidden
+    }
+
+
+    .one-icon {
+        @apply p-[0.43rem] flex items-center justify-center
+    }
+
 
 
 }

@@ -2,8 +2,7 @@ import React from 'react'
 import "./SignUp.css"
 import google from "../assets/Google.svg"
 import PageLayout from './PageLayout'
-import { toggleForm } from '../Store/SignupReducer'
-import { useDispatch, useSelector } from 'react-redux'
+// import { useDispatch, useSelector } from 'react-redux'
 import { useState } from 'react'
 
 const SignUp = () => {

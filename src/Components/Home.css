@@ -34,8 +34,64 @@
 }
 
 .advert {
-    background-image: url(../assets/ad.png);
-    @apply h-[21.5rem] w-[76.24%] ml-[3.125%] mt-[2.5rem] bg-[black] bg-cover bg-center bg-no-repeat
+    /* background-image: url(../assets/ad.png); */
+    @apply h-[21.5rem] w-[76.24%] ml-[3.125%] mt-[2.5rem] bg-center bg-no-repeat  relative
+}
+
+.slick-slider{
+    @apply  relative !important
+}
+
+.ads {
+    @apply h-[fit] w-[fit]
+}
+
+
+.ads1 {
+    background-image: url(../assets/pic1.jpg);
+    @apply bg-cover bg-center bg-no-repeat h-[21.5rem] w-[76.24%]
+}
+
+.ads2 {
+    background-image: url(../assets/pic2.jpg);
+    @apply bg-cover bg-center bg-no-repeat h-[21.5rem] w-[76.24%]
+}
+
+.ads3 {
+    background-image: url(../assets/pic3.jpg);
+    @apply bg-cover bg-center bg-no-repeat h-[21.5rem] w-[76.24%]
+}
+
+.ads4 {
+    background-image: url(../assets/pic4.jpg);
+    @apply bg-cover bg-center bg-no-repeat h-[21.5rem] w-[76.24%]
+}
+
+.ads5 {
+    background-image: url(../assets/pic5.jpg);
+    @apply bg-cover bg-center bg-no-repeat h-[21.5rem] w-[76.24%]
+}
+
+.ads6 {
+    background-image: url(../assets/pic6.jpg);
+    @apply bg-cover bg-center bg-no-repeat h-[21.5rem] w-[76.24%]
+}
+
+.ads7 {
+    background-image: url(../assets/pic7.jpg);
+    @apply bg-cover bg-center bg-no-repeat h-[21.5rem] w-[76.24%]
+}
+
+.slick-dots {
+    @apply h-[1rem] w-[1rem] !important
+}
+
+.slick-prev:before{
+    color: red;
+}
+
+.slick-active{
+    background-color: red !important;
 }
 
 .home-2 {
@@ -89,4 +145,154 @@
 
 .seconds-text {
     @apply text-[1rem]
+}
+
+@media screen and (max-width: 767px) {
+
+
+
+    .home {
+        @apply h-[100vh]
+    }
+
+    .home-1 {
+        @apply flex flex-row h-fit px-[4.38%] mb-[4.75rem]
+    }
+
+    .choose {
+        @apply flex flex-col gap-[1rem] pt-[2.5rem] w-[15.1%] hidden
+    }
+
+    .p-choose {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        @apply leading-[1.5rem] text-[1rem]
+    }
+
+    .first-row {
+        @apply pr-[1rem]
+    }
+
+    .v-line {
+        border: 0.0312rem solid black;
+        opacity: 0.3;
+        @apply ml-[3.125%] hidden
+    }
+
+
+    .slick-dots {
+        @apply h-[1rem] w-[1rem] !important
+    }
+
+    .slick-prev{
+        height: 2rem;
+        width: 2rem !important
+    }
+    
+    
+    
+    .slick-active{
+        background-color: red !important;
+    }
+
+    .ads {
+        /* background-image: url(../assets/ad.png); */
+        /* @apply h-[12.5rem] w-[100%] ml-[0.125%] mt-[1.5rem] */
+        @apply h-fit w-fit
+    }
+
+    .ads1 {
+        background-image: url(../assets/pic1.jpg);
+        @apply bg-cover bg-center bg-no-repeat h-[21.5rem] w-[76.24%]
+    }
+
+    .ads3 {
+        @apply bg-cover bg-center bg-no-repeat h-[21.5rem] w-[76.24%]
+    }
+
+    .ads4 {
+        @apply bg-cover bg-center bg-no-repeat h-[21.5rem] w-[76.24%]
+    }
+
+    .ads5 {
+        @apply bg-cover bg-center bg-no-repeat h-[21.5rem] w-[76.24%]
+    }
+
+    .ads6 {
+        @apply bg-cover bg-center bg-no-repeat h-[21.5rem] w-[76.24%]
+    }
+
+
+    .ads7 {
+        @apply bg-cover bg-center bg-no-repeat h-[21.5rem] w-[76.24%]
+    }
+
+    .ads2 {
+        @apply bg-cover bg-center bg-no-repeat h-[21.5rem] w-[76.24%]
+    }
+
+    .ads2 {
+        @apply bg-cover bg-center bg-no-repeat h-[21.5rem] w-[76.24%]
+    }
+
+
+
+
+    .advert {
+        /* background-image: url(../assets/ad.png); */
+        @apply h-[12.5rem] w-[100%] ml-[0.125%] mt-[1.5rem]
+    }
+
+    .home-2 {
+        @apply flex flex-col pl-[4.38%]
+    }
+
+    .small-orange {
+        @apply w-[1.25rem] h-[2.5rem] bg-[#DB4444] rounded-[0.25rem]
+    }
+
+    .sub-head {
+        @apply flex flex-row items-center gap-[1rem] font-semibold leading-[1.5rem] text-[#DB4444] mb-[1.5rem]
+    }
+
+    .big-head {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        @apply text-[2.25rem] font-semibold flex flex-row gap-[5.43rem] items-center
+    }
+
+    .d-time {
+        @apply flex flex-row gap-[1rem]
+    }
+
+    .days {
+        @apply flex flex-col
+    }
+
+    .hours {
+        @apply flex flex-col
+    }
+
+    .mins {
+        @apply flex flex-col
+    }
+
+    .seconds {
+        @apply flex flex-col
+    }
+
+    .mins-text {
+        @apply text-[1rem]
+    }
+
+    .days-text {
+        @apply text-[1rem]
+    }
+
+    .hours-text {
+        @apply text-[1rem]
+    }
+
+    .seconds-text {
+        @apply text-[1rem]
+    }
+
 }
