@@ -1,0 +1,5 @@
+@media screen and (max-width: 767px) {
+    .toast-message {
+        @apply w-[13rem] text-[0.5rem] mt-[2rem] ml-[2rem]
+    }
+}

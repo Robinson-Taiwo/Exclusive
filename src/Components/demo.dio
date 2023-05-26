@@ -1,0 +1,118 @@
+<mxfile host="65bd71144e">
+    <diagram id="PekMNzmzu_LpSiYtbdp_" name="Page-1">
+        <mxGraphModel dx="726" dy="809" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="5" style="edgeStyle=none;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="40" y="530" as="targetPoint"/>
+                        <mxPoint x="50" y="530" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="Tee's Exclusive Website" style="swimlane;startSize=20;horizontal=1;childLayout=treeLayout;horizontalTree=0;resizable=0;containerType=tree;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="110" y="585" width="1223" height="480" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="&lt;b&gt;&lt;font color=&quot;#ff3333&quot;&gt;HOMEPAGE(NOT LOGGED IN)&lt;/font&gt;&lt;/b&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="8">
+                    <mxGeometry x="429" y="40" width="140" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="SIGNUP/LOGIN" style="whiteSpace=wrap;html=1;" vertex="1" parent="8">
+                    <mxGeometry x="733" y="160" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" parent="8" source="9" target="10">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="CONTACT" style="whiteSpace=wrap;html=1;" vertex="1" parent="8">
+                    <mxGeometry x="561" y="160" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" parent="8" source="9" target="12">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="ABOUT" style="whiteSpace=wrap;html=1;" vertex="1" parent="8">
+                    <mxGeometry x="421" y="160" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" parent="8" source="9" target="14">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-937" y="110" as="sourcePoint"/>
+                        <mxPoint x="-867" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" value="CART FEATURE" style="whiteSpace=wrap;html=1;" vertex="1" parent="8">
+                    <mxGeometry x="165" y="160" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" parent="8" source="9" target="16">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-797" y="110" as="sourcePoint"/>
+                        <mxPoint x="-657" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="22" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" target="23" source="10" parent="8">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-457" y="695" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="23" value="HOMEPAGE(LOGGED IN)" style="whiteSpace=wrap;html=1;" vertex="1" parent="8">
+                    <mxGeometry x="693" y="250" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" target="25" source="16" parent="8">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-457" y="695" as="sourcePoint"/>
+                        <mxPoint x="-657" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" value="CART WITH DETAILS" style="whiteSpace=wrap;html=1;" vertex="1" parent="8">
+                    <mxGeometry x="20" y="250" width="180" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" target="27" source="16" parent="8">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-457" y="695" as="sourcePoint"/>
+                        <mxPoint x="-657" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="27" value="CHECKOUT/PAYMENT" style="whiteSpace=wrap;html=1;" vertex="1" parent="8">
+                    <mxGeometry x="240" y="250" width="170" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" target="49" source="23" parent="8">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="893" y="785" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="49" value="CART FEATURE" style="whiteSpace=wrap;html=1;" vertex="1" parent="8">
+                    <mxGeometry x="363" y="380" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" target="51" source="23" parent="8">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="893" y="785" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="51" value="ABOUT" style="whiteSpace=wrap;html=1;" vertex="1" parent="8">
+                    <mxGeometry x="583" y="380" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" target="53" source="23" parent="8">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="893" y="785" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="53" value="CONTACT" style="whiteSpace=wrap;html=1;" vertex="1" parent="8">
+                    <mxGeometry x="803" y="380" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" target="55" source="23" parent="8">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="893" y="785" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="55" value="LOGOUT" style="whiteSpace=wrap;html=1;" vertex="1" parent="8">
+                    <mxGeometry x="1023" y="380" width="180" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="Z7BJBZHYrPXiCR5zFBPr" name="Page-2">
+        <mxGraphModel dx="573" dy="809" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

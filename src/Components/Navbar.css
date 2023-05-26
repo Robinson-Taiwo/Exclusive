@@ -126,8 +126,12 @@
         @apply h-[1.5rem] w-[1.5rem]
     }
 
+    .menu-mobile-logo {
+        @apply h-[1.5rem] w-[1.5rem] block
+    }
+
     .menu-logo {
-        @apply  absolute  h-[1.5rem] w-[1.5rem] left-[3rem] top-[2.5rem]
+        @apply absolute
     }
 
     .logo {
@@ -135,7 +139,7 @@
     }
 
     .form {
-        @apply flex bg-[#f5f5f5] pt-[0.43rem] pb-[0.43rem] pl-[1.25rem] pr-[0.75rem] rounded-[1.25rem] items-center w-[100%] justify-between
+        @apply flex bg-[#f5f5f5] pt-[0.03rem] pb-[0.0rem] pl-[1.25rem] pr-[0.75rem] rounded-[1.25rem] items-center w-[100%] justify-between h-[80%]
     }
 
     .search-input::placeholder {
@@ -175,22 +179,66 @@
     } */
 
 
-    .show-mobile-menu {
+    .show-mobile-menubar {
         position: fixed;
-        top: 3rem;
+        transition: all 0.5s ease-out;
+
+        top: 0rem;
         left: 0;
         width: 90%;
         height: 100%;
-        background-color: red;
+        background-color: #DB4444;
         z-index: 9999;
         display: flex;
         justify-content: center;
         align-items: center;
-       @apply flex-col
+        @apply flex-col gap-[0.5rem]
     }
 
+    .show-icon-menubar {
+        @apply h-[1.5rem] w-[1.5rem] block  top-[4rem] absolute          
+    }
+
+
+    /* 
+    .show-mobile-menu {
+        position: absolute;
+        
+        top: 0;
+        left: 0;
+        width: 90%;
+        height: 90%;
+        background-color: #005469;
+        z-index: 9999;
+        display: block;
+        align-items: center;
+    } */
+
+    .modal {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        width: 90%;
+        height: 100%;
+
+        text-align: center;
+        overflow-y: auto;
+        overflow: auto;
+        @apply flex flex-col
+    }
+
+
+
+    .mobile-nav-links {
+        @apply bg-[red] mt-[1rem]
+    }
+
+
+
     .nav-link {
-        @apply text-[white] p-[2rem] text-center
+        border: 0.08rem solid rgb(207, 39, 39);
+        @apply text-[#814848] p-[2rem] text-center text-[1rem] w-[100%]
     }
 
 

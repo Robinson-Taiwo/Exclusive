@@ -11,6 +11,12 @@
     @apply pt-[3.75rem] pr-[9.4%] w-[100vw] overflow-hidden
 }
 
+.lo{
+
+    @apply mt-[2rem] text-[blue]  underline     
+}
+
+
 .signup-image {
     background-image: url(../assets/login.png);
     @apply bg-no-repeat bg-cover h-[48.81rem] w-[50.31rem]

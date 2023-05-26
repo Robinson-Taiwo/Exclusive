@@ -4,15 +4,20 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import PageLayout from './PageLayout'
 import images from "./data"
-import pic1 from "../assets/pic1.jpg"
+import pic8 from "../assets/pic8.jpg"
 import pic2 from "../assets/pic2.jpg"
 import pic3 from "../assets/pic3.jpg"
 import pic4 from "../assets/pic4.jpg"
 import pic5 from "../assets/pic5.jpg"
 import pic6 from "../assets/pic6.jpg"
 import pic7 from "../assets/pic7.jpg"
+import SwiperCore, { EffectCoverflow, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
 
 import "./Home.css"
+import FlashSales from './FlashSales';
 
 const Home = () => {
 
@@ -47,6 +52,20 @@ const Home = () => {
   const hours = Math.floor((timeLeft % 86400) / 3600);
   const minutes = Math.floor((timeLeft % 3600) / 60);
   const secondsRemaining = timeLeft % 60;
+
+  SwiperCore.use([EffectCoverflow, Pagination]);
+  // if you want to use array
+  const slide_img = [
+    "https://swiperjs.com/demos/images/nature-1.jpg",
+    "https://swiperjs.com/demos/images/nature-2.jpg",
+    "https://swiperjs.com/demos/images/nature-3.jpg",
+    "https://swiperjs.com/demos/images/nature-4.jpg",
+    "https://swiperjs.com/demos/images/nature-5.jpg",
+    "https://swiperjs.com/demos/images/nature-6.jpg",
+    "https://swiperjs.com/demos/images/nature-7.jpg",
+    "https://swiperjs.com/demos/images/nature-8.jpg",
+    "https://swiperjs.com/demos/images/nature-9.jpg",
+  ];
 
   return (
     <PageLayout>
@@ -214,6 +233,22 @@ const Home = () => {
 
             </div>
           </div>
+
+          <div className="flash-sales">
+
+            <FlashSales />
+
+            <button className="viw-all">
+
+            </button>
+
+          </div>
+
+          <div>
+           
+          </div>
+
+
 
 
         </section>

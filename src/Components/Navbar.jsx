@@ -6,14 +6,18 @@ import cart from "../assets/cart.svg"
 import user from "../assets/user.svg"
 import menu from "../assets/menu.svg"
 import close from "../assets/close.svg"
+import { logout } from './Features/SignUp/SignupSlice'
 
 
 import "./Navbar.css"
+import { useDispatch, useSelector } from 'react-redux'
 
 const Navbar = () => {
 
     const [showMenu, setShowMenu] = useState(false)
     const [showIcons, setShowIcons] = useState(false)
+    const { isAuthenticated } = useSelector(state => state.signup)
+    const dispatch = useDispatch()
 
     return (
         <div className='Navbar-container'>
@@ -30,7 +34,9 @@ const Navbar = () => {
                         <Link to="/" className='nav-link' >Home</Link>
                         <Link className='nav-link' >Contact</Link>
                         <Link className='nav-link'>About</Link>
-                        <Link to="/signUp" className='nav-link'>Signup</Link>
+                        {/* <Link to="/signUp" className='nav-link'>Signup</Link>           */}
+                        {isAuthenticated ?  <Link to="/signUp" className='nav-link'>logout</Link> :  <Link to="/signUp" className='nav-link'>Signup</Link>}
+
 
                     </nav>
 
@@ -42,7 +48,7 @@ const Navbar = () => {
 
                         </form>
 
-                        <div className={!showIcons ? "nav-icons" : "nav-icons-hide"}>
+                        <div className={isAuthenticated ? "nav-icons" : "nav-icons-hide"}>
 
 
                             <div className="one-icon">
@@ -82,7 +88,7 @@ const Navbar = () => {
                     </div>
 
 
-                    <div className={showIcons ? "nav-icons" : "nav-icons-hide"}>
+                    <div className={isAuthenticated ? "nav-icons" : "nav-icons-hide"}>
 
 
                         <div className="one-icon">
@@ -101,33 +107,46 @@ const Navbar = () => {
                         </div>
 
 
+
                     </div>
 
 
-                    <ul className={showMenu ? 'show-mobile-menu' : "nav-links"}>
+                    <div className={showMenu ? 'show-mobile-menubar' : "nav-links"}>
 
-                        {showMenu && (<img src={close} alt="mennu-bar" className={showMenu ? "menu-logo" : "menu"} onClick={() => setShowMenu(!showMenu)} />)}
+                        {showMenu && (<img src={close} alt="mennu-bar" className="menu-mobile-logo" onClick={() => setShowMenu(!showMenu)} />)}
 
-                        <li className="nav-link">
+                        <div className="modal">
 
-                            <Link to="/"  >Home</Link>
-                        </li>
-                        <li className="nav-link">
+                            <div className="mobile-nav-links">
+                                <div className="nav-link">
 
-                            <Link  >Contact</Link>
-                        </li>
-                        <li className="nav-link">
+                                    <Link to="/"  >Home</Link>
+                                </div>
+                                <div className="nav-link">
 
-                            <Link >About</Link>
-                        </li>
-                        <li className="nav-link">
+                                    <Link  >Contact</Link>
+                                </div>
+                                <div className="nav-link">
 
-                            <Link to="/signUp" >Sign Up</Link>
-                        </li>
+                                    <Link >About</Link>
+                                </div>
+                                <div className="nav-link">
+
+                                    <Link to="/signUp" >Sign Up</Link>
+                                </div>
+
+                                <button onClick={()=>dispatch(logout) } className="nav-link">
+                                    logout
+                                </button>
+                            </div>
 
 
 
-                    </ul>
+
+                        </div>
+
+
+                    </div>
 
 
                 </div>
