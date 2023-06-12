@@ -1,23 +1,36 @@
 .FlashSales {
-  
-    @apply flex flex-row gap-[1.88rem] mb-[5rem] w-[100vw]
+
+    @apply mb-[0rem]
+}
+
+.flash-boxe {
+    @apply w-[100%] h-[29rem] pr-[0rem]
 }
 
 .flash-box {
-    @apply h-[21.88rem] w-[16.88rem] 
+    @apply h-[98%] w-[16.88rem]
 }
 
 
-/* .flash-2box{
-    @apply flex flex-row overflow-auto overflow-x-scroll
-} */
+
+.lrt {
+    @apply h-[20rem]
+}
+
+.lola {
+    @apply flex pl-[4rem] flex-row mr-[6.6rem]
+}
+
+
+
+
 
 .flash-sec2 {
     @apply flex flex-col gap-[0.5rem] pt-[1rem] w-[16.88rem] items-center
 }
 
 .sec2-name {
-    @apply text-[1rem] font-medium leading-[1.5rem]
+    @apply text-[1rem] text-center font-medium leading-[1.5rem]
 }
 
 .sec2-price {
@@ -32,14 +45,18 @@
     @apply h-[11.88rem] w-[11.25rem] relative top-[-0.3rem] left-[2.5rem] pt-[1rem]
 }
 
-.flash-inner1{
+.flash-inner1 {
     @apply h-[15.625rem] w-[16.88rem] bg-[#F5F5F5]
 }
 
-.discount{
-    @apply bg-[#DB4444] w-[3.44rem]  h-[1.63rem] flex justify-center      items-center text-[white] rounded-[0.25rem] text-[0.75rem] leading-[1.125rem]  top-[4rem] 
+.discount {
+    @apply bg-[#DB4444] w-[3.44rem] h-[1.63rem] flex justify-center items-center text-[white] rounded-[0.25rem] text-[0.75rem] leading-[1.125rem] top-[4rem]
 }
 
-.inner1-icons{
+.inner1-icons {
     @apply flex flex-row w-[100%] justify-between relative top-[1rem] px-[1.33rem]
+}
+
+.hearcion {
+    @apply cursor-pointer
 }

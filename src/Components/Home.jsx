@@ -3,21 +3,24 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import PageLayout from './PageLayout'
-import images from "./data"
+// import images from "./data"
+import ProfileData from "./data"
 import pic8 from "../assets/pic8.jpg"
 import pic2 from "../assets/pic2.jpg"
-import pic3 from "../assets/pic3.jpg"
-import pic4 from "../assets/pic4.jpg"
-import pic5 from "../assets/pic5.jpg"
-import pic6 from "../assets/pic6.jpg"
-import pic7 from "../assets/pic7.jpg"
-import SwiperCore, { EffectCoverflow, Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
+import up from "../assets/up.svg"
+import carIcon from "../assets/carIcon.svg"
+import customer from "../assets/customer.svg"
+import safe from "../assets/safe.svg"
+import second from "../assets/second-ad.png"
+
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 
 import "./Home.css"
 import FlashSales from './FlashSales';
+import Carousel from 'react-multi-carousel';
+import Categories from './Categories';
+import Test from './Test';
 
 const Home = () => {
 
@@ -28,8 +31,12 @@ const Home = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true
+    autoplay: true,
+    arrows: true,
+    renderButtonGroupOutside: true
   };
+
+
 
   const threeDaysInSeconds = 345600;
   const [timeLeft, setTimeLeft] = useState(threeDaysInSeconds);
@@ -53,26 +60,67 @@ const Home = () => {
   const minutes = Math.floor((timeLeft % 3600) / 60);
   const secondsRemaining = timeLeft % 60;
 
-  SwiperCore.use([EffectCoverflow, Pagination]);
-  // if you want to use array
-  const slide_img = [
-    "https://swiperjs.com/demos/images/nature-1.jpg",
-    "https://swiperjs.com/demos/images/nature-2.jpg",
-    "https://swiperjs.com/demos/images/nature-3.jpg",
-    "https://swiperjs.com/demos/images/nature-4.jpg",
-    "https://swiperjs.com/demos/images/nature-5.jpg",
-    "https://swiperjs.com/demos/images/nature-6.jpg",
-    "https://swiperjs.com/demos/images/nature-7.jpg",
-    "https://swiperjs.com/demos/images/nature-8.jpg",
-    "https://swiperjs.com/demos/images/nature-9.jpg",
-  ];
+  const ProfileData = [
+
+
+
+    {
+      image: "ad",
+    },
+
+
+
+
+
+  ]
+
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
+
+  const responsivead = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 1
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
+
 
   return (
     <PageLayout>
 
       <div className='home' >
 
-        <section className="home-1">
+        <section id='top' className="home-1">
 
 
 
@@ -123,46 +171,20 @@ const Home = () => {
 
 
 
-          <Slider {...settings} className="advert" >
+          <div className="advert-slider">
 
-            <div className="ads1">
-              {/* <img src={pic1} alt="" className="ads" /> */}
+            <Carousel responsive={responsivead} arrows={false} showDots={true} autoPlay={true} className="advert-slides" swipeable={true} dotListClass='dotun'  >
 
-            </div>
+              {ProfileData.map((data, index) => {
+                return (
+                  <div className='ad-slid' key={index}>
+                    <img src={`src/assets/${data.image}.jpg`} alt="" className="ad-slide-image" />
+                  </div>
+                )
+              })}
+            </Carousel>
 
-            <div className="ads2">
-              {/* <img src={pic2} alt="" className="ads" /> */}
-
-            </div>
-
-            <div className="ads3">
-              {/* <img src={pic3} alt="" className="ads" /> */}
-
-            </div>
-
-            <div className="ads4">
-              {/* <img src={pic4} alt="" className="ads" /> */}
-
-            </div>
-
-            <div className="ads5">
-              {/* <img src={pic5} alt="" className="ads" /> */}
-
-            </div>
-
-            <div className="ads6">
-              {/* <img src={pic6} alt="" className="ads" /> */}
-
-            </div>
-
-            <div className="ads7">
-              {/* <img src={pic1} alt="" className="ads" /> */}
-
-            </div>
-
-
-
-          </Slider>
+          </div>
 
 
 
@@ -236,22 +258,260 @@ const Home = () => {
 
           <div className="flash-sales">
 
-            <FlashSales />
+            <div className="fla-sa">
 
-            <button className="viw-all">
+              <FlashSales />
+            </div>
 
-            </button>
+            <div className="view-all-div">
+              <button className="view-all">
+                view all products
+              </button>
+            </div>
 
           </div>
 
           <div>
-           
+
           </div>
 
 
 
 
         </section>
+
+        <div className="horizontal-line"> </div>
+
+        <section className="categories-comp">
+          <Categories />
+        </section>
+
+        <div className="horizontal-line2"> </div>
+
+        <section className="this-month">
+
+          <div className="sub-head">
+
+            <div className="small-orange">
+
+            </div>
+            <span className="sub-text">This Month</span>
+
+          </div>
+
+          <div className="big-head-1">
+
+            <div className="big-head">
+              <h1 className="d-head">
+                Best Selling Products
+              </h1>
+            </div>
+
+
+
+            <button className="view-all-2">
+              view all
+            </button>
+          </div>
+
+
+          <section>
+
+            <FlashSales />
+          </section>
+
+
+        </section>
+
+        <section className="category-ad">
+          <div className="category-ad-box">
+
+            <img src={second} alt="" className="second-ad" />
+          </div>
+        </section>
+
+
+        <section className="this-month">
+
+          <div className="sub-head">
+
+            <div className="small-orange">
+
+            </div>
+            <span className="sub-text">Our Prodcuts</span>
+
+          </div>
+
+          <div className="big-head-1">
+
+            <div className="big-head">
+              <h1 className="d-head">
+                Explore Our Products
+              </h1>
+            </div>
+
+
+
+            <button className="view-all-2">
+              view all
+            </button>
+          </div>
+
+
+          <section>
+
+            <FlashSales />
+          </section>
+
+
+        </section>
+
+
+        <section className="featured">
+
+
+          <div className="featured-sub-head">
+
+            <div className="small-orange">
+
+            </div>
+            <span className="sub-text">Featured</span>
+
+          </div>
+
+          <div className="big-head-1">
+
+            <div className="featured-big-head">
+              <h1 className="d-head">
+                New Arrivals
+              </h1>
+            </div>
+          </div>
+
+
+          <div className="arrival">
+
+            <div className="arrival-one">
+
+              <h1 className="arive-head">
+                PlayStation 5
+              </h1>
+
+              <p className="arive-text">
+                Black and White version of the PS5 coming out on sale.
+              </p>
+
+              <p className="shop-now">Shop now</p>
+
+
+            </div>
+
+            <div className="arrival-two">
+
+              <div className="arrival2-a">
+                <h1 className="arive-head">
+                  Women's Collections
+                </h1>
+
+                <p className="arive-text">
+                  Featured woman collections that give you another vibe.
+                </p>
+
+                <p className="shop-now">Shop now</p>
+              </div>
+
+              <div className="arrival2-b">
+
+                <div className="speakers">
+                  <h1 className="arive-head">
+                    Speakers
+                  </h1>
+
+                  <p className="arive-text">
+                    Amazon wireless speakers.
+                  </p>
+
+                  <p className="shop-now">Shop Now</p>
+                </div>
+
+                <div className="perfume">
+
+                  <h1 className="arive-head">
+                    Perfume
+                  </h1>
+
+                  <p className="arive-text">
+                    GUCCI INTENSE OUD EDP
+                  </p>
+
+                  <p className="shop-now">Shop now</p>
+                </div>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+
+
+
+        </section>
+
+
+        <section className="pros">
+
+          <div className="pro-first">
+
+            <img src={carIcon} alt="carIcon" className="pro-icon" />
+
+            <h1 className="pro-head">
+              FREE AND FAST DELIVERY
+            </h1>
+
+            <p className="pro-text">
+              Free delivery for all orders over $140
+            </p>
+
+          </div>
+
+          <div className="pro-first">
+
+            <img src={customer} alt="carIcon" className="pro-icon" />
+
+            <h1 className="pro-head">
+              24/7 CUSTOMER SERVICE
+            </h1>
+
+            <p className="pro-text">
+              Friendly 24/7 customer support
+            </p>
+
+          </div>
+
+          <div className="pro-first">
+
+            <img src={safe} alt="carIcon" className="pro-icon" />
+
+            <h1 className="pro-head">
+              MONEY BACK GUARANTEE
+            </h1>
+
+            <p className="pro-text">
+              We return money within 30 days
+            </p>
+
+          </div>
+
+        </section>
+
+        <section className="last">
+          <a href='#top' className="go-up">
+            <img src={up} alt="" className="up-arrow" />
+          </a>
+        </section>
+
 
 
       </div>

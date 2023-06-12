@@ -38,53 +38,63 @@
     @apply h-[21.5rem] w-[76.24%] ml-[3.125%] mt-[2.5rem] bg-center bg-no-repeat relative
 }
 
-.slick-slider {
-    @apply relative !important
+.ad-slid {
+    @apply h-[21.5rem] w-[100%] flex items-center justify-center object-contain
 }
+
+.ad-slide-image {
+    @apply h-[100%] w-[100%] object-center
+}
+
+.advert-slider {
+    @apply h-[21.5rem] w-[76.24%] ml-[3.125%] mt-[2.5rem] bg-center bg-no-repeat bg-contain
+}
+
+.advert-slides {
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+}
+
+.dotun button {
+    @apply bg-[grey]
+}
+
+.react-multi-carousel-dot--active :nth-last-child(1) {
+    @apply bg-[#DB4444]
+}
+
+
+
+
+
+
+
+/* .slick-slider {
+    @apply relative !important
+} */
 
 .ads {
     @apply h-[fit] w-[fit]
 }
 
 
-.ads1 {
-    background-image: url(../assets/pic8.jpg);
-    @apply bg-cover bg-center bg-no-repeat h-[21.5rem] w-[76.24%]
+
+
+
+.react-multiple-carousel__arrow--right {
+    @apply bg-[#DB4444] !important
 }
 
-.ads2 {
-    background-image: url(../assets/pic9.jpg);
-    @apply bg-cover bg-center bg-no-repeat h-[21.5rem] w-[76.24%]
+.react-multiple-carousel__arrow--left {
+    @apply bg-[#DB4444] !important
 }
 
-.ads3 {
-    background-image: url(../assets/pic10.jpg);
-    @apply bg-cover bg-center bg-no-repeat h-[21.5rem] w-[76.24%]
-}
-
-.ads4 {
-    background-image: url(../assets/pic11.jpg);
-    @apply bg-cover bg-center bg-no-repeat h-[21.5rem] w-[76.24%]
-}
-
-.ads5 {
-    background-image: url(../assets/pic5.jpg);
-    @apply bg-cover bg-center bg-no-repeat h-[21.5rem] w-[76.24%]
-}
-
-.ads6 {
-    background-image: url(../assets/pic6.jpg);
-    @apply bg-cover bg-center bg-no-repeat h-[21.5rem] w-[76.24%]
-}
-
-.ads7 {
-    background-image: url(../assets/pic7.jpg);
-    @apply bg-cover bg-center bg-no-repeat h-[21.5rem] w-[76.24%]
-}
-
-.slick-dots {
+/* .slick-dots {
     @apply h-[1rem] w-[1rem] bg-[red] !important
 }
+
+
 
 .slick-prev:before {
     color: red;
@@ -94,14 +104,14 @@
     color: red;
     background: #000;
     height: 4rem;
-}
+} */
 
 /* .slick-active {
     background-color: red !important;
 } */
 
 .home-2 {
-    @apply flex flex-col pl-[9.38%]
+    @apply flex flex-col
 }
 
 .small-orange {
@@ -109,12 +119,12 @@
 }
 
 .sub-head {
-    @apply flex flex-row items-center gap-[1rem] font-semibold leading-[1.5rem] text-[#DB4444] mb-[1.5rem]
+    @apply flex flex-row items-center gap-[1rem] font-semibold leading-[1.5rem] text-[#DB4444] mb-[1.5rem] pl-[9.38%]
 }
 
 .big-head {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    @apply text-[2.25rem] font-semibold flex flex-row gap-[5.43rem] items-center mb-[2.5rem]
+    @apply text-[2.25rem] font-semibold flex flex-row gap-[5.43rem] items-center mb-[2.5rem] pl-[9.38%]
 }
 
 .d-time {
@@ -153,9 +163,170 @@
     @apply text-[1rem]
 }
 
-/* .flash-sales{
-    @apply overflow-x-scroll overflow-hidden
-} */
+.view-all {
+    @apply flex items-center justify-center bg-[#DB4444] h-[3.5rem] w-[14.625rem] text-white rounded-[0.25rem] mt-[1.75rem]
+}
+
+.view-all-div {
+    @apply h-[100%] w-[100%] flex justify-center items-center
+}
+
+.image {
+    @apply h-[100%] w-[100%]
+}
+
+.fla-sa {
+    @apply pl-[9.38%]
+}
+
+.profi {
+    @apply h-[100%] w-[100%] bg-center
+}
+
+
+.slid {
+    @apply h-[26rem] w-[40rem]
+}
+
+.caro {
+    @apply h-[26rem]
+}
+
+.slide-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: cover;
+}
+
+.horizontal-line {
+    border: 0.031rem solid black;
+    @apply ml-[9.38%] mr-[9.38%] mt-[3.75rem] opacity-[0.3] mb-[5rem]
+}
+
+.horizontal-line2 {
+    border: 0.031rem solid black;
+    @apply ml-[9.38%] mr-[9.38%] mt-[4.375rem] opacity-[0.3] mb-[4.375rem]
+}
+
+.categories-comp {
+    @apply px-[9.38%]
+}
+
+
+.this-month section {
+    @apply ml-[9.38%] mb-[8.75rem]
+}
+
+.big-head-1 {
+    @apply flex justify-between flex-row pr-[9.38%]
+}
+
+.view-all-2 {
+    @apply flex items-center justify-center bg-[#DB4444] h-[3.5rem] w-[9.94rem] text-white rounded-[0.25rem]
+}
+
+
+.category-ad {
+    @apply px-[9.38%] w-[73.125] h-[31.25rem] mb-[4.4375rem]
+}
+
+.category-ad-box {
+    @apply w-[100%] h-[100%] flex justify-center items-center
+}
+
+.featured {
+    @apply mx-[9.38%]
+}
+
+.featured-sub-head {
+    @apply flex flex-row items-center gap-[1rem] font-semibold leading-[1.5rem] text-[#DB4444] mb-[1.5rem]
+}
+
+.featured-big-head {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    @apply text-[2.25rem] font-semibold flex flex-row gap-[5.43rem] items-center mb-[2.5rem]
+}
+
+
+.arrival {
+    @apply h-[37.5rem] flex flex-row justify-evenly
+}
+
+.arrival-two {
+    @apply flex flex-col gap-[2.5rem] h-[100%]
+}
+
+.arrival-one {
+    background-image: url(../assets/station.png);
+    @apply w-[35.63rem] h-[37.5rem] bg-cover bg-center bg-no-repeat p-[2rem] flex flex-col gap-[1rem] justify-end
+}
+
+.arrival2-a {
+    background-image: url(../assets/blackhat.png);
+    @apply bg-cover bg-center bg-no-repeat h-[17.15rem] w-[35.63rem] p-[2rem] flex flex-col gap-[1rem] justify-end
+}
+
+.arrival2-b {
+    @apply flex flex-row gap-[1.87rem]
+}
+
+.arrival2-b div {
+    @apply w-[16.87rem] h-[17.75rem]
+}
+
+
+.speakers {
+    background-image: url(../assets/speak.png);
+    @apply bg-cover bg-center bg-no-repeat p-[2rem] flex flex-col gap-[1rem] justify-end
+}
+
+
+.perfume {
+    background-image: url(../assets/gucci.png);
+    @apply bg-cover bg-center bg-no-repeat p-[2rem] flex flex-col gap-[1rem] justify-end
+}
+
+.arive-head {
+    @apply text-white font-semibold text-[1.5rem] leading-[1.5rem]
+}
+
+.arive-text {
+    @apply text-white leading-[1.3rem] text-[0.9rem] font-normal w-[15.125rem]
+}
+
+.shop-now {
+    @apply text-white underline leading-[1.5rem] font-medium text-[1rem]
+}
+
+
+.pros {
+    @apply w-[100%] h-[12rem] px-[9.38%] flex flex-row gap-[5.5rem] justify-center items-center mt-[8.75rem] mb-[3.875rem]
+}
+
+.pro-icon {
+    @apply mb-[1.5rem] h-[5rem] w-[5rem]
+}
+
+.pro-head {
+    @apply mb-[0.5rem] font-bold text-[1.25rem] leading-[1.75rem]
+}
+
+.pro-text {
+    @apply text-[0.87rem] font-normal leading-[1.21rem]
+}
+
+.pro-first {
+    @apply w-[17rem] h-[10.1rem] flex flex-col items-center justify-center
+}
+
+.up-arrow{
+    @apply h-[3rem] w-[3rem] flex self-end
+}
+
+.last{
+    @apply w-[100%] pr-[5.56rem] flex justify-end
+}
 
 @media screen and (max-width: 767px) {
 
