@@ -300,7 +300,7 @@ const SignUp = () => {
 
 
                             </div>
-                            <button onClick={() => setShowSignupForm(!showSignupForm)} className="lo">
+                            <button onClick={() => setShowSignupForm(!showSignupForm)} className="los">
                                 {showSignupForm ? "Log in" : "sign-up"}
                             </button>
                         </div>

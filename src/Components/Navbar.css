@@ -115,7 +115,7 @@
     }
 
     .mobile-first-logo {
-        @apply flex flex-row gap-[0.75rem]
+        @apply flex flex-row gap-[0.75rem] mt-[0.5rem]
     }
 
     .mid-nav {
@@ -127,23 +127,23 @@
     }
 
     .menu-mobile-logo {
-        @apply h-[1.5rem] w-[1.5rem] block
+        @apply h-[1.5rem] w-[1.5rem] mr-[2rem] mt-[1rem]
     }
 
-    .menu-logo {
-        @apply absolute
+    .out-logo {
+        @apply w-[100%] flex justify-end 
     }
 
     .logo {
-        @apply font-bold text-[1.2rem] leading-[1rem]
+        @apply font-bold text-[1rem] leading-[1rem]
     }
 
     .form {
-        @apply flex bg-[#f5f5f5] pt-[0.03rem] pb-[0.0rem] pl-[1.25rem] pr-[0.75rem] rounded-[1.25rem] items-center w-[100%] justify-between h-[80%]
+        @apply flex bg-[#f5f5f5] pt-[0.03rem] pb-[0.0rem] pl-[0.7rem] pr-[0.75rem] rounded-[1.25rem] items-center w-[90%] justify-between h-[80%] mt-[0.5rem]
     }
 
     .search-input::placeholder {
-        @apply text-[#000000] opacity-[0.5] leading-[1.5rem]
+        @apply text-[#000000] opacity-[0.5] leading-[1.5rem] text-[0.7rem]
     }
 
     .search-input {
@@ -151,7 +151,7 @@
     }
 
     .search-icon {
-        @apply bg-[#f5f5f5] h-[1.5rem] w-[1.5rem] text-[0.75rem]
+        @apply bg-[#f5f5f5] h-[1.4rem] w-[1.2rem] text-[0.75rem]
     }
 
     .si {
@@ -180,23 +180,14 @@
 
 
     .show-mobile-menubar {
-        position: fixed;
         transition: all 0.5s ease-out;
-
-        top: 0rem;
-        left: 0;
-        width: 90%;
-        height: 100%;
-        background-color: #DB4444;
-        z-index: 9999;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        @apply flex-col gap-[0.5rem]
+        z-index: 2;
+        border: 0.08rem solid rgb(207, 39, 39);
+        @apply absolute block list-none bg-[white] left-0 top-[0rem] w-[90%] h-[100%]
     }
 
     .show-icon-menubar {
-        @apply h-[1.5rem] w-[1.5rem] block  top-[4rem] absolute          
+        @apply h-[1.5rem] w-[1.5rem] block top-[4rem] absolute
     }
 
 
@@ -215,30 +206,24 @@
     } */
 
     .modal {
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        padding: 20px;
-        width: 90%;
-        height: 100%;
-
-        text-align: center;
-        overflow-y: auto;
-        overflow: auto;
-        @apply flex flex-col
+        transition: all 0.5s ease-out;
+        z-index: 2;
+        
+        @apply absolute block list-none bg-[blue] left-0 top-[0.75rem] w-[90%] h-[80%]
     }
 
 
 
+
     .mobile-nav-links {
-        @apply bg-[red] mt-[1rem]
+        @apply  mt-[1rem] 
     }
 
 
 
     .nav-link {
-        border: 0.08rem solid rgb(207, 39, 39);
-        @apply text-[#814848] p-[2rem] text-center text-[1rem] w-[100%]
+        /* border: 0.08rem solid rgb(207, 39, 39); */
+        @apply text-[black] p-[2rem] text-center text-[1rem] w-[100%]
     }
 
 

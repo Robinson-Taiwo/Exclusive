@@ -11,9 +11,9 @@
     @apply pt-[3.75rem] pr-[9.4%] w-[100vw] overflow-hidden
 }
 
-.lo{
+.lo {
 
-    @apply mt-[2rem] text-[blue]  underline     
+    @apply mt-[2rem] text-[blue] underline
 }
 
 
@@ -113,7 +113,7 @@
 @media screen and (max-width: 767px) {
 
     .signup {
-        @apply pt-[1.75rem] pr-[0.43rem] h-max items-center justify-center w-[100vw] overflow-hidden
+        @apply pt-[4.75rem] pr-[0.43rem] h-max items-center justify-center w-[100vw] overflow-hidden
     }
 
     .signup-image {
@@ -146,7 +146,7 @@
         border: none;
         border-bottom: 0.0625rem solid #000000;
         outline: none;
-        @apply w-[15rem] pb-[0.5rem] text-[1rem]
+        @apply w-[15rem] pb-[0.5rem] text-[0.8rem]
         /* optional: removes the default focus outline */
     }
 
@@ -176,7 +176,7 @@
     }
 
     .gog {
-        @apply ml-[0.53rem] 
+        @apply ml-[0.53rem]
     }
 
     .already {
@@ -185,7 +185,7 @@
     }
 
     .log-in {
-        @apply flex flex-row gap-[0.53rem] h-[1.86rem] items-center justify-center mt-[0.53rem] text-[0.75rem]
+        @apply flex flex-row gap-[0.53rem] h-[1.86rem] items-center justify-center mt-[0.53rem] text-[0.8rem]
     }
 
     .log {
@@ -200,7 +200,7 @@
     }
 
     .orange-login {
-        @apply w-[4.76rem] h-[1.86rem] text-white bg-[#DB4444] flex items-center justify-center rounded-[0.13rem] text-[0.53rem]
+        @apply w-[4.76rem] h-[1.86rem] text-white bg-[#DB4444] flex items-center justify-center rounded-[0.13rem] text-[0.83rem]
     }
 
     .login-buttons {
@@ -208,10 +208,12 @@
     }
 
     .forgot {
-        @apply text-[#DB4444] text-[0.53rem]
+        @apply text-[#DB4444] text-[0.83rem]
     }
 
-
+    .los {
+        @apply mt-[2rem] bg-[#DB4444] py-[0.4rem] rounded-[0.25rem] text-[white] px-[1rem]
+    }
 
 
 

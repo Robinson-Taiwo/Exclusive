@@ -70,8 +70,6 @@ const Home = () => {
 
 
 
-
-
   ]
 
   const responsive = {
@@ -173,7 +171,7 @@ const Home = () => {
 
           <div className="advert-slider">
 
-            <Carousel responsive={responsivead} arrows={false} showDots={true} autoPlay={true} className="advert-slides" swipeable={true} dotListClass='dotun'  >
+            <Carousel responsive={responsivead} arrows={false} showDots={true} autoPlay={true} className="advert-slides" swipeable={true} dotListClass='dotun' containerClass='zi'  >
 
               {ProfileData.map((data, index) => {
                 return (
@@ -196,7 +194,7 @@ const Home = () => {
           <div className="sub-head">
 
             <div className="small-orange">
-
+              
             </div>
             <span className="sub-text">Today's</span>
 

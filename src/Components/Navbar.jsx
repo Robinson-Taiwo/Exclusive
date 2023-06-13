@@ -113,9 +113,13 @@ const Navbar = () => {
 
                     <div className={showMenu ? 'show-mobile-menubar' : "nav-links"}>
 
+                        <div className="out-logo">
                         {showMenu && (<img src={close} alt="mennu-bar" className="menu-mobile-logo" onClick={() => setShowMenu(!showMenu)} />)}
 
-                        <div className="modal">
+                        </div>
+
+
+                       
 
                             <div className="mobile-nav-links">
                                 <div className="nav-link">
@@ -143,8 +147,7 @@ const Navbar = () => {
 
 
 
-                        </div>
-
+                        
 
                     </div>
 

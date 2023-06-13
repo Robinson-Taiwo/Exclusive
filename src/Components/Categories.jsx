@@ -10,7 +10,7 @@ import "./Categories.css"
 
 const Categories = () => {
     return (
-        <div>
+        <div className='cate' >
 
             <div className="sub-headc">
 
