@@ -16,7 +16,7 @@ const Navbar = () => {
 
     const [showMenu, setShowMenu] = useState(false)
     const [showIcons, setShowIcons] = useState(false)
-    const { isAuthenticated } = useSelector(state => state.signup)
+    const [isAuthenticated, setIsAuthenticated] = useState(true)
     const dispatch = useDispatch()
 
     return (
@@ -35,7 +35,7 @@ const Navbar = () => {
                         <Link className='nav-link' >Contact</Link>
                         <Link className='nav-link'>About</Link>
                         {/* <Link to="/signUp" className='nav-link'>Signup</Link>           */}
-                        {isAuthenticated ?  <Link to="/signUp" className='nav-link'>logout</Link> :  <Link to="/signUp" className='nav-link'>Signup</Link>}
+                        {isAuthenticated ? <Link to="/signUp" className='nav-link'>logout</Link> : <Link to="/signUp" className='nav-link'>Signup</Link>}
 
 
                     </nav>
@@ -53,12 +53,13 @@ const Navbar = () => {
 
                             <div className="one-icon">
 
-                                <img src={heart} alt="" className="icon" />
+                                <img src={heart} alt="" className="icon " />
                             </div>
 
                             <div className="one-icon">
 
                                 <img src={cart} alt="" className="icon" />
+                                <span className="carto">11</span>
                             </div>
 
                             <div className="one-icon">
@@ -91,14 +92,12 @@ const Navbar = () => {
                     <div className={isAuthenticated ? "nav-icons" : "nav-icons-hide"}>
 
 
+                       
                         <div className="one-icon">
 
-                            <img src={heart} alt="" className="icon" />
-                        </div>
+                            <img src={cart} alt="" className="icon" /> <span className="carto">1</span>
 
-                        <div className="one-icon">
 
-                            <img src={cart} alt="" className="icon" />
                         </div>
 
                         <div className="one-icon">
@@ -114,40 +113,40 @@ const Navbar = () => {
                     <div className={showMenu ? 'show-mobile-menubar' : "nav-links"}>
 
                         <div className="out-logo">
-                        {showMenu && (<img src={close} alt="mennu-bar" className="menu-mobile-logo" onClick={() => setShowMenu(!showMenu)} />)}
+                            {showMenu && (<img src={close} alt="mennu-bar" className="menu-mobile-logo" onClick={() => setShowMenu(!showMenu)} />)}
 
                         </div>
 
 
-                       
 
-                            <div className="mobile-nav-links">
-                                <div className="nav-link">
 
-                                    <Link to="/"  >Home</Link>
-                                </div>
-                                <div className="nav-link">
+                        <div className="mobile-nav-links">
+                            <div className="nav-link">
 
-                                    <Link  >Contact</Link>
-                                </div>
-                                <div className="nav-link">
+                                <Link to="/"  >Home</Link>
+                            </div>
+                            <div className="nav-link">
 
-                                    <Link >About</Link>
-                                </div>
-                                <div className="nav-link">
+                                <Link  >Contact</Link>
+                            </div>
+                            <div className="nav-link">
 
-                                    <Link to="/signUp" >Sign Up</Link>
-                                </div>
+                                <Link >About</Link>
+                            </div>
+                            <div className="nav-link">
 
-                                <button onClick={()=>dispatch(logout) } className="nav-link">
-                                    logout
-                                </button>
+                                <Link to="/signUp" >Sign Up</Link>
                             </div>
 
+                            <button onClick={() => dispatch(logout)} className="nav-link">
+                                logout
+                            </button>
+                        </div>
 
 
 
-                        
+
+
 
                     </div>
 

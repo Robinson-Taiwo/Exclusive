@@ -79,6 +79,9 @@
     @apply p-[0.43rem] flex items-center justify-center
 }
 
+.carto {
+    @apply items-center text-[0.7rem] justify-center flex bg-[#DB4444] relative rounded-[50%] top-[-0.5rem] left-[-0.65rem] h-[1.4rem] w-[1.4rem] text-white
+}
 
 
 @media screen and (max-width: 767px) {
@@ -131,7 +134,7 @@
     }
 
     .out-logo {
-        @apply w-[100%] flex justify-end 
+        @apply w-[100%] flex justify-end
     }
 
     .logo {
@@ -163,10 +166,21 @@
         outline: none;
     }
 
+    /* .one-icon {
+        @apply flex flex-col
+    } */
+
     .icon {
         @apply h-[1.5rem] w-[1.5rem]
     }
 
+    .iconl {
+        @apply h-[1.5rem] w-[1.5rem]
+    }
+
+    .carto {
+        @apply items-center text-[0.7rem] justify-center flex bg-[#DB4444] relative rounded-[50%] top-[-0.5rem] left-[-0.65rem] w-[1rem] h-[1rem] text-white
+    }
 
     .nav-links {
         @apply gap-[3rem] flex hidden
@@ -208,7 +222,7 @@
     .modal {
         transition: all 0.5s ease-out;
         z-index: 2;
-        
+
         @apply absolute block list-none bg-[blue] left-0 top-[0.75rem] w-[90%] h-[80%]
     }
 
@@ -216,7 +230,7 @@
 
 
     .mobile-nav-links {
-        @apply  mt-[1rem] 
+        @apply mt-[1rem]
     }
 
 
@@ -307,8 +321,21 @@
         outline: none;
     }
 
+    .one-icon {
+        @apply flex flex-col
+    }
+
     .icon {
-        @apply h-[1.5rem] w-[1.5rem]
+        @apply h-[1rem] w-[1rem]
+    }
+    
+    .one-iconl {
+        @apply flex flex-col hidden
+    }
+
+
+    .carto {
+        @apply bg-[#DB4444] relative
     }
 
 

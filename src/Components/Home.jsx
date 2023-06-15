@@ -194,7 +194,7 @@ const Home = () => {
           <div className="sub-head">
 
             <div className="small-orange">
-              
+
             </div>
             <span className="sub-text">Today's</span>
 
@@ -509,6 +509,9 @@ const Home = () => {
             <img src={up} alt="" className="up-arrow" />
           </a>
         </section>
+
+
+        <Test />
 
 
 

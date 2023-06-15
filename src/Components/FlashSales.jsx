@@ -1,17 +1,15 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import stars from '../assets/stars.svg'
 import data from "./data"
 import heart from "../assets/white-heart.svg"
 import gamepad from '../assets/gamepad.png'
+import up from "../assets/up.svg"
+
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./FlashSales.css"
 
 const FlashSales = () => {
-
-
-
-
 
     const responsivenesss = {
         superLargeDesktop: {
@@ -33,72 +31,84 @@ const FlashSales = () => {
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
-            items: 1,
+            items: 2,
             slidesToSlide: 1 // optional, default to 1.
         }
     };
 
-    // const settings = {
-    //     dots: true,
-    //     infinite: true,
-    //     speed: 500,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     autoplay: true,
-    //     arrows: true,
-    //     renderButtonGroupOutside: true
-    // };
 
+
+    const reference = useRef()
+
+    const next = () => {
+        reference.current.next()
+    }
+
+    const previous = () => {
+        reference.current.previous()
+    }
 
     return (
 
         <div className="FlashSales">
+            <button onClick={previous} className="caro-button">
+                <img src={up} alt="" className="lup-arrow rotate--90 " />
+            </button>
+
+            <button onClick={next} className="caro-button ml-4">
+            <img src={up} alt="" className="pup-arrow rotate-90 "  />
+            </button>
             <div className="flash-boxe">
-                <Carousel arrows={true} renderButtonGroupOutside={true} infinite={true} responsive={responsivenesss} swipeable={true} containerClass='lola' itemClass='amebo' >
+                <Carousel   ref={reference} arrows={false}  renderButtonGroupOutside={true} responsive={responsivenesss} swipeable={true} draggable={true} containerClass='lola' itemClass='amebo' >
 
                     {data.map((data, index) => {
                         return (
-                            <div key={index} className="flash-box">
+                            <div  key={index} className="flash-container">
 
-                                <div className="flash-sec1">
+                                <div className="flash-box">
 
-                                    <div className="flash-inner1">
+                                    <div className="flash-sec1">
 
-                                        <div className="inner1-icons">
+                                        <div className="flash-inner1">
 
-                                            <div className="discount">
-                                                -14%
+                                            <div className="inner1-icons">
+
+                                                <div className="discount">
+                                                    -14%
+                                                </div>
+
+                                                <img src={heart} alt="" className="hear-cion" />
+
                                             </div>
 
-                                            <img src={heart} alt="" className="hear-cion" />
+                                            <img src={data.image} className="flash-inner2" />
+
+
 
                                         </div>
 
-                                        <img src={data.image} className="flash-inner2" />
+                                    </div>
+                                    <div className="flash-sec2">
 
+                                        <p className="sec2-name">
+                                            {data.title}
+                                        </p>
+
+                                        <p className="sec2-price">
+                                            {data.price}$
+                                        </p>
+
+                                        <p>
+                                            <img src={stars} alt="ratings" className="sec2-rating" />
+
+                                        </p>
+
+                                        <p>
+
+                                        </p>
 
 
                                     </div>
-
-                                </div>
-                                <div className="flash-sec2">
-
-                                    <p className="sec2-name">
-                                        {data.title}
-                                    </p>
-
-                                    <p className="sec2-price">
-                                        {data.price}$
-                                    </p>
-
-                                    <p>
-                                        <img src={stars} alt="ratings" className="sec2-rating" />
-
-                                    </p>
-
-                                    <p>
-
-                                    </p>
 
 
                                 </div>

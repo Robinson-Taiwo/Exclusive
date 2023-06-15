@@ -520,7 +520,7 @@
 
 
     .this-month section {
-        @apply ml-[9.38%] mb-[2.75rem]
+        @apply mx-[4.38%] mb-[2.75rem]
     }
 
     .big-head-1 {
