@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import stars from '../assets/stars.svg'
 import data from "./data"
 import heart from "../assets/white-heart.svg"
@@ -10,6 +10,10 @@ import "react-multi-carousel/lib/styles.css";
 import "./FlashSales.css"
 
 const FlashSales = () => {
+
+
+    const [isHovered, setIsHovered] = useState(false);
+
 
     const responsivenesss = {
         superLargeDesktop: {
@@ -38,6 +42,7 @@ const FlashSales = () => {
 
 
 
+
     const reference = useRef()
 
     const next = () => {
@@ -52,20 +57,22 @@ const FlashSales = () => {
 
         <div className="FlashSales">
             <button onClick={previous} className="caro-button">
-                <img src={up} alt="" className="lup-arrow rotate--90 " />
+                <img src={up} alt="" className="lup-arrow  " />
             </button>
 
             <button onClick={next} className="caro-button ml-4">
-            <img src={up} alt="" className="pup-arrow rotate-90 "  />
+                <img src={up} alt="" className="pup-arrow rotate-90 " />
             </button>
             <div className="flash-boxe">
-                <Carousel   ref={reference} arrows={false}  renderButtonGroupOutside={true} responsive={responsivenesss} swipeable={true} draggable={true} containerClass='lola' itemClass='amebo' >
+                <Carousel ref={reference} arrows={false} renderButtonGroupOutside={true} responsive={responsivenesss} swipeable={true} draggable={true} containerClass='lola' itemClass='amebo' >
 
                     {data.map((data, index) => {
                         return (
-                            <div  key={index} className="flash-container">
+                            <div key={index} classNameflash-container
+                            >
 
-                                <div className="flash-box">
+                                <div className={isHovered ? 'hovered' : 'flash-box'} onMouseEnter={() => setIsHovered(true)}
+                                    onMouseLeave={() => setIsHovered(false)} >
 
                                     <div className="flash-sec1">
 
@@ -102,6 +109,7 @@ const FlashSales = () => {
                                             <img src={stars} alt="ratings" className="sec2-rating" />
 
                                         </p>
+                                        <button className="add-to-cart">Add to Cart</button>
 
                                         <p>
 

@@ -194,6 +194,8 @@
 
 
     .show-mobile-menubar {
+        overflow-y: auto;
+        overflow: scroll;
         transition: all 0.5s ease-out;
         z-index: 2;
         border: 0.08rem solid rgb(207, 39, 39);
@@ -230,10 +232,14 @@
 
 
     .mobile-nav-links {
-        @apply mt-[1rem]
+        @apply mt-[1rem]  gap-[1rem] flex flex-wrap flex-row w-[100%] justify-center items-center pt-[2rem]
     }
 
+    .nav-link-mobile {
+        box-shadow: 0rem 1rem 1.58rem rgba(0, 0, 0, 0.15);
 
+        @apply bg-[green] h-[2rem] w-[4rem] justify-center items-center flex
+    }
 
     .nav-link {
         /* border: 0.08rem solid rgb(207, 39, 39); */
@@ -245,7 +251,37 @@
         @apply flex h-[100%] justify-center
     }
 
+    .mobile-choose {
+        grid-template-columns: repeat(2, 1fr);
+        @apply grid gap-[1rem] px-[0.5rem] mb-[2rem]
+    }
 
+    .p-choose-mobile {
+        @apply bg-[#DB4444] p-[0.5rem] text-[0.8rem] text-[white] rounded-[0.25rem] shadow-2xl flex justify-center items-center w-[100%] h-[100%]
+    }
+
+    .select-choice {
+        @apply text-[#DB4444] text-[1.2rem] font-bold
+    }
+
+    .select-mobile {
+        box-shadow: 0rem 1rem 1.58rem rgba(0, 0, 0, 0.15);
+
+        @apply flex justify-center items-center flex-col gap-[1rem]
+    }
+
+    .user-section {
+        @apply px-[3rem] flex justify-center items-center flex-col gap-[1rem] bg-[black] py-[2em] text-[white]
+    }
+
+
+    .user-name {
+        @apply font-bold
+    }
+
+    .link-category {
+        @apply flex justify-center items-center flex-col
+    }
 
 }
 
@@ -328,7 +364,7 @@
     .icon {
         @apply h-[1rem] w-[1rem]
     }
-    
+
     .one-iconl {
         @apply flex flex-col hidden
     }

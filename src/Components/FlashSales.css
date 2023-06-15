@@ -4,41 +4,40 @@
 }
 
 .flash-boxe {
-    @apply  w-[100%] h-[25rem] pr-[0rem] 
+    @apply w-[100%] h-[26rem] pr-[0rem]
 }
 
 .flash-box {
-    outline: 3px solid blueviolet;
-    @apply h-[98%] w-[16.88rem]     
+    @apply h-[26rem] w-[16.88rem]
 }
 
-.flash-container{
+.flash-container {
     max-width: 100%;
     padding-right: 2rem;
     box-sizing: border-box;
     flex: 0 0 auto;
 }
 
-.amebo{
-    @apply  mx-[0rem] px-[0rem]
+.amebo {
+    @apply mx-[0rem] px-[0rem]
 }
 
 
 
 .lola {
-    
-    @apply flex  flex-row  
+
+    @apply flex flex-row
 }
 
 
 
 
 .flash-sec2 {
-    @apply flex flex-col gap-[0.5rem] pt-[1rem] w-[16.88rem] items-center
+    @apply flex flex-col gap-[0.5rem] pt-[1rem] w-[16.88rem] justify-between items-center
 }
 
 .sec2-name {
-    @apply text-[1rem] text-center font-medium leading-[1.5rem] font-bold
+    @apply text-[1rem] text-center  leading-[1.5rem] font-bold
 }
 
 .sec2-price {
@@ -50,11 +49,11 @@
 }
 
 .flash-inner2 {
-    @apply h-[11.88rem] w-[11.25rem] relative top-[-0.3rem] left-[2.5rem] pt-[1rem]
+    @apply h-[12.88rem] w-[11.25rem] relative top-[-0.3rem] left-[2.5rem] pt-[1rem]
 }
 
 .flash-inner1 {
-    @apply h-[15.625rem] w-[16.88rem] bg-[#F5F5F5]
+    @apply h-[15.625rem] w-[16.88rem] bg-white
 }
 
 .discount {
@@ -70,10 +69,24 @@
 }
 
 .lup-arrow{
-    @apply rotate-90
-      
-  }
-  
+
+@apply -rotate-90
+}
+
+/* .pup-arrow{
+    @apply 
+} */
+
+.add-to-cart {
+    display: none;
+}
+
+.hovered .add-to-cart {
+    /* display: block; */
+
+    @apply bg-[black] flex text-[white] w-[100%] h-[2rem] mb-[2rem] items-center justify-center
+}
+
 
 
 @media screen and (max-width: 767px) {
@@ -83,79 +96,86 @@
 
         @apply mb-[0rem]
     }
-    
+
     .flash-boxe {
         @apply w-[100%] h-[20rem] pr-[0.28%]
     }
-    
+
     .flash-box {
-        @apply h-fit w-[10rem] 
+        @apply h-fit w-[10rem]
     }
-    
 
-.flash-container{
-    @apply pr-[1rem]
-}
 
-    .flash-sec1{
+    .flash-container {
+        @apply pr-[1rem]
+    }
+
+    .flash-sec1 {
         @apply h-[8rem] w-[100%]
     }
-    
-    
+
+
     .lrt {
         @apply h-[20rem]
     }
-    
+
     .lola {
         @apply flex pl-[0rem] gap-[1rem] flex-row mr-[0.6rem]
     }
-    
-    
-    
-    
-    
+
+
+
+
+
     .flash-sec2 {
         @apply flex flex-col gap-[0.5rem] pt-[1rem] w-[9rem] items-center justify-center
     }
-    
+
     .sec2-name {
         @apply text-[0.5rem] text-center font-medium leading-[1rem] flex-wrap
     }
-    
+
     .sec2-price {
         @apply text-[0.6rem] font-medium leading-[1.5rem] text-[#DB4444]
     }
-    
+
     .sec2-rating {
         @apply h-[1.25rem] w-[6.75rem]
     }
-    
+
     .flash-inner2 {
         @apply h-[9rem] w-[100%] relative top-[-0.3rem] left-[0.5rem] pt-[0rem] pb-[2rem]
     }
-    
+
     .flash-inner1 {
-        @apply h-[15.625rem] w-[9.88rem]  pr-[2rem] mb-[2rem]
+        @apply h-[15.625rem] w-[9.88rem] pr-[2rem] mb-[2rem]
     }
-    
+
     .discount {
         @apply bg-[#DB4444] w-[1.44rem] h-[0.93rem] flex justify-center items-center text-[white] rounded-[0.25rem] text-[0.6rem] leading-[1.125rem] top-[4rem]
     }
-    
+
     .inner1-icons {
         @apply flex flex-row w-[100%] justify-between relative top-[0.2rem] px-[1.33rem]
     }
-    
 
 
-  
+
+
 
     /* .amebo {
         @apply  w-[30rem]
     } */
 
-    
-    
+
+    .lup-arrow{
+
+        @apply -rotate-90 h-[1.5rem] focus:outline-none
+        }
+        
+        .pup-arrow{
+            @apply h-[1.5rem]
+        }
 
 
     .hear-cion {

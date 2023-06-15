@@ -32,8 +32,8 @@ const Navbar = () => {
 
                     <nav className="nav-links">
                         <Link to="/" className='nav-link' >Home</Link>
-                        <Link className='nav-link' >Contact</Link>
-                        <Link className='nav-link'>About</Link>
+                        <Link to="/contact" className='nav-link' >Contact</Link>
+                        <Link to="/About" className='nav-link'>About</Link>
                         {/* <Link to="/signUp" className='nav-link'>Signup</Link>           */}
                         {isAuthenticated ? <Link to="/signUp" className='nav-link'>logout</Link> : <Link to="/signUp" className='nav-link'>Signup</Link>}
 
@@ -51,21 +51,21 @@ const Navbar = () => {
                         <div className={isAuthenticated ? "nav-icons" : "nav-icons-hide"}>
 
 
-                            <div className="one-icon">
+                            <Link to="/wishlist" className="one-icon">
 
                                 <img src={heart} alt="" className="icon " />
-                            </div>
+                            </Link>
 
-                            <div className="one-icon">
+                            <Link to="/cart" className="one-icon">
 
                                 <img src={cart} alt="" className="icon" />
                                 <span className="carto">11</span>
-                            </div>
+                            </Link>
 
-                            <div className="one-icon">
+                            <Link to="/account" className="one-icon">
                                 <img src={user} alt="" className="icon" />
 
-                            </div>
+                            </Link>
 
 
                         </div>
@@ -92,18 +92,18 @@ const Navbar = () => {
                     <div className={isAuthenticated ? "nav-icons" : "nav-icons-hide"}>
 
 
-                       
-                        <div className="one-icon">
+
+                        <Link to="/cart" className="one-icon">
 
                             <img src={cart} alt="" className="icon" /> <span className="carto">11</span>
 
 
-                        </div>
+                        </Link>
 
-                        <div className="one-icon">
+                        <Link to="/account" className="one-icon">
                             <img src={user} alt="" className="icon" />
 
-                        </div>
+                        </Link>
 
 
 
@@ -117,35 +117,100 @@ const Navbar = () => {
 
                         </div>
 
+                        <div className="user-section">
+                            <img src={user} alt="" className="mobile-user" />
+                            <p className="user-name ">
+                                Omoyeni Taiwo
+                            </p>
+
+                        </div>
+
+                        <div className="link-category">
+
+                            <h1 className="chose-link">
+                                select page
+                            </h1>
+
+                            <div className="mobile-nav-links">
+                                <div className="nav-link-mobile">
+
+                                    <Link to="/"  >Home</Link>
+                                </div>
+                                <div className="nav-link-mobile">
+
+                                    <Link to="/contact" >Contact</Link>
+                                </div>
+                                <div className="nav-link-mobile">
+
+                                    <Link to="/about" >About</Link>
+                                </div>
+                                <div className="nav-link-mobile">
+
+                                    <Link to="/signUp" >Sign Up</Link>
+                                </div>
+
+                                <div className="nav-link-mobile">
+
+                                    <Link to="/wishlist" >Wishlist</Link>
+                                </div>
 
 
 
-                        <div className="mobile-nav-links">
-                            <div className="nav-link">
+                                <button onClick={() => dispatch(logout)} className="nav-link">
+                                    logout
+                                </button>
 
-                                <Link to="/"  >Home</Link>
                             </div>
-                            <div className="nav-link">
-
-                                <Link  >Contact</Link>
-                            </div>
-                            <div className="nav-link">
-
-                                <Link >About</Link>
-                            </div>
-                            <div className="nav-link">
-
-                                <Link to="/signUp" >Sign Up</Link>
-                            </div>
-
-                            <button onClick={() => dispatch(logout)} className="nav-link">
-                                logout
-                            </button>
                         </div>
 
 
 
 
+                        <div className="select-mobile">
+
+                            <h1 className="select-choice">select a category</h1>
+
+                            <div className="mobile-choose">
+
+                                <p className="p-choose-mobile">
+                                    Woman's Fashion
+                                </p>
+
+                                <p className="p-choose-mobile">
+                                    Men's Fashion
+                                </p>
+
+                                <p className="p-choose-mobile">
+                                    Electronics Fashion
+                                </p>
+
+                                <p className="p-choose-mobile">
+                                    Home & lifestyle
+                                </p>
+
+                                <p className="p-choose-mobile">
+                                    Medicine
+                                </p>
+
+                                <p className="p-choose-mobile">
+                                    Sports & Outdoor
+                                </p>
+
+
+                                <p className="p-choose-mobile">
+                                    Baby's & Toys
+                                </p>
+
+
+                                <p className="p-choose-mobile">
+                                    Groceries & Pets
+                                </p>
+
+                                <p className="p-choose-mobile">
+                                    Health & Beauty            </p>
+                            </div>
+
+                        </div>
 
 
                     </div>
