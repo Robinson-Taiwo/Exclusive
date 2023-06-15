@@ -4,7 +4,7 @@
 }
 
 .flash-boxe {
-    @apply flex justify-center w-[100%] h-[25rem] pr-[0rem] 
+    @apply  w-[100%] h-[25rem] pr-[0rem] 
 }
 
 .flash-box {
