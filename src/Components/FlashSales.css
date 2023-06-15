@@ -38,7 +38,7 @@
 }
 
 .sec2-name {
-    @apply text-[1rem] text-center font-medium leading-[1.5rem]
+    @apply text-[1rem] text-center font-medium leading-[1.5rem] font-bold
 }
 
 .sec2-price {

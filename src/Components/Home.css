@@ -373,7 +373,7 @@
     }
 
     .ad-slid {
-        @apply h-[100%] w-[100%] object-cover
+        @apply h-[100%] w-[100%] object-contain
     }
 
     .ad-slide-image {
@@ -381,14 +381,14 @@
     }
 
     .advert-slider {
-        @apply h-[11rem] w-[100%] ml-[0.125%] mt-[1.5rem] bg-center bg-no-repeat bg-cover
+        @apply h-[9rem] w-[100%] px-[2.125%] mt-[1.5rem] bg-center bg-no-repeat bg-cover
     }
 
     .advert-slides {
         /* height: 100%;
         width: 100%; */
         background-size: contain;
-        @apply object-cover h-[11rem] w-[98%]
+        @apply object-cover h-[9rem] w-[100%]
     }
 
     .dotun button {
