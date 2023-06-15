@@ -381,14 +381,14 @@
     }
 
     .advert-slider {
-        @apply h-[11.5rem] w-[100%] ml-[0.125%] mt-[1.5rem] bg-center bg-no-repeat bg-cover
+        @apply h-[11rem] w-[100%] ml-[0.125%] mt-[1.5rem] bg-center bg-no-repeat bg-cover
     }
 
     .advert-slides {
         /* height: 100%;
         width: 100%; */
         background-size: contain;
-        @apply object-cover h-[11.5rem] w-[100%]
+        @apply object-cover h-[11rem] w-[98%]
     }
 
     .dotun button {
