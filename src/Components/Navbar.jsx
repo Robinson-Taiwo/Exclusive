@@ -157,7 +157,7 @@ const Navbar = () => {
 
 
                                 <button onClick={() => dispatch(logout)} className="nav-link">
-                                    logout
+                                    LOG OUT
                                 </button>
 
                             </div>

@@ -134,7 +134,7 @@
     }
 
     .out-logo {
-        @apply w-[100%] flex justify-end
+        @apply w-[100%] flex justify-end bg-[black]
     }
 
     .logo {
@@ -232,18 +232,19 @@
 
 
     .mobile-nav-links {
-        @apply mt-[1rem]  gap-[1rem] flex flex-wrap flex-row w-[100%] justify-center items-center pt-[2rem]
+        @apply mt-[1rem] gap-[1rem] flex flex-wrap flex-row w-[100%] justify-center items-center pt-[2rem]
     }
 
     .nav-link-mobile {
         box-shadow: 0rem 1rem 1.58rem rgba(0, 0, 0, 0.15);
 
-        @apply bg-[green] h-[2rem] w-[4rem] justify-center items-center flex
+        @apply bg-[white] rounded-[0.25rem] text-[black] h-[2rem] w-[4rem] justify-center items-center flex
     }
 
     .nav-link {
-        /* border: 0.08rem solid rgb(207, 39, 39); */
-        @apply text-[black] p-[2rem] text-center text-[1rem] w-[100%]
+        box-shadow: 0rem 1rem 1.58rem rgba(0, 0, 0, 0.15);
+
+        @apply text-[white] p-[1rem] text-center text-[1rem] w-[100%] bg-[black] font-bold mx-[2rem] mb-[1rem]
     }
 
 
@@ -281,6 +282,10 @@
 
     .link-category {
         @apply flex justify-center items-center flex-col
+    }
+
+    .chose-link {
+        @apply mt-[1rem]
     }
 
 }
