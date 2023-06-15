@@ -89,7 +89,7 @@
     }
     
     .flash-box {
-        @apply h-[18rem] w-[10rem] 
+        @apply h-fit w-[10rem] 
     }
     
 
@@ -131,11 +131,11 @@
     }
     
     .flash-inner2 {
-        @apply h-[100%] w-[100%] relative top-[-0.3rem] left-[0.5rem] pt-[1rem]
+        @apply h-[9rem] w-[100%] relative top-[-0.3rem] left-[0.5rem] pt-[0rem] pb-[2rem]
     }
     
     .flash-inner1 {
-        @apply h-[9.625rem] w-[9.88rem]  pr-[2rem] mb-[2rem]
+        @apply h-[15.625rem] w-[9.88rem]  pr-[2rem] mb-[2rem]
     }
     
     .discount {
@@ -143,7 +143,7 @@
     }
     
     .inner1-icons {
-        @apply flex flex-row w-[100%] justify-between relative top-[1rem] px-[1.33rem]
+        @apply flex flex-row w-[100%] justify-between relative top-[0.2rem] px-[1.33rem]
     }
     
 
