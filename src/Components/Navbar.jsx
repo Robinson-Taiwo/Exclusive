@@ -95,7 +95,7 @@ const Navbar = () => {
                        
                         <div className="one-icon">
 
-                            <img src={cart} alt="" className="icon" /> <span className="carto">1</span>
+                            <img src={cart} alt="" className="icon" /> <span className="carto">11</span>
 
 
                         </div>

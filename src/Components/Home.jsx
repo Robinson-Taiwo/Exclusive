@@ -68,6 +68,14 @@ const Home = () => {
       image: "ad",
     },
 
+    {
+      image: "pic2",
+    },
+    
+    {
+      image: "pic8",
+    },
+    
 
 
   ]
