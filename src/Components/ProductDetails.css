@@ -221,3 +221,5 @@
 .details-sub-head {
     @apply flex flex-row items-center gap-[1rem] font-semibold leading-[1.5rem] text-[#DB4444] mb-[3.75rem]
 }
+
+@media screen and (max-width: 767px) {}
