@@ -1,21 +1,25 @@
 .FlashSales {
 
-    @apply mb-[0rem]
+    @apply mb-[0rem] 
 }
 
 .flash-boxe {
-    @apply w-[100%] h-[26rem] pr-[0rem]
+    @apply w-[100%] h-fit pr-[0rem]
 }
 
 .flash-box {
     @apply h-[26rem] w-[16.88rem]
 }
 
-.flash-container {
+/* .flash-container {
     max-width: 100%;
     padding-right: 2rem;
     box-sizing: border-box;
     flex: 0 0 auto;
+} */
+
+.flash-container{
+    @apply h-fit 
 }
 
 .amebo {

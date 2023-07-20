@@ -8,6 +8,8 @@ import Products from './Products'
 import About from './About'
 import Contact from './Contact'
 import Account from './Account'
+import ProductDetails from './ProductDetails'
+import NotFound from './NotFound'
 
 const AppRoutes = () => {
     return (
@@ -20,8 +22,8 @@ const AppRoutes = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/account" element={<Account />} />
-
-
+            <Route path="/products/:id" element={<ProductDetails />} />
+            <Route path='/Notfound' element={<NotFound />} />
         </Routes>
     )
 }

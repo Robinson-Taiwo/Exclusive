@@ -1,0 +1,223 @@
+.product-details {
+    @apply pt-[5rem] px-[8.44rem]
+}
+
+.details-subImages {
+    background: var(--secondary, #F5F5F5);
+
+    @apply w-[10.625rem] h-[8.625rem] rounded-[0.25rem] justify-center items-center flex
+}
+
+.details-subImages img {
+    width: 7rem;
+    height: 6.0625rem;
+    flex-shrink: 0;
+}
+
+.product-small-images {
+    @apply flex flex-col gap-[1rem]
+}
+
+.product-details-images {
+    @apply gap-[1.88rem] flex flex-row
+}
+
+.details-mainImages {
+    background: var(--secondary, #F5F5F5);
+
+    @apply w-[31.25rem] h-[37.5rem] flex justify-center items-center
+}
+
+.details-bigImages {
+    width: 27.875rem;
+    height: 19.6875rem;
+}
+
+.product-details-main {
+    @apply mb-[8.75rem] flex flex-row gap-[4rem]
+}
+
+
+.product-details-info {
+    /* @apply w-[24.938rem] */
+}
+
+.productDetail-title {
+    color: var(--text-2, #000);
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.045rem;
+    @apply mb-[1rem]
+}
+
+.details-review {
+    @apply flex flex-row gap-[1rem]
+}
+
+.details-counting {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.3125rem;
+    opacity: 0.5;
+}
+
+.details-instock {
+    color: var(--button-1, #0F6);
+    /* Title/14PX Regular */
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.3125rem;
+}
+
+.details-price {
+    color: var(--text-2, #000);
+    /* Heading/24PX Regular */
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    /* 100% */
+    letter-spacing: 0.045rem;
+    @apply mt-[1.06rem]
+}
+
+.details-description {
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.3125rem;
+    @apply mt-[1.5rem] w-[25rem] mb-[1.5rem]
+}
+
+.details-line {
+    display: flex;
+    width: 25rem;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    opacity: 0.5;
+    border: 0.00001rem solid black;
+}
+
+.details-actions {
+    @apply flex flex-row gap-[1rem] mt-[1.5rem]
+}
+
+.details-ammount {
+    @apply flex flex-row
+}
+
+.details-minus {
+    border-radius: 0.25rem 0rem 0rem 0.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.50);
+    display: flex;
+    width: 2.5rem;
+    height: 2.75rem;
+    padding: 0.625rem 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.details-plus {
+    border-radius: 0rem 0.25rem 0.25rem 0rem;
+    background: var(--secondary-2, #DB4444);
+    display: flex;
+    width: 2.5625rem;
+    height: 2.75rem;
+    padding: 0.625rem 0.5rem 0.625rem 0.5625rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.details-number {
+    border-top: 1px solid rgba(0, 0, 0, 0.50);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.50);
+    display: flex;
+    width: 5rem;
+    padding: 0.5rem 0rem;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.details-buy {
+    border-radius: 0.25rem;
+    background: var(--button-2, #DB4444);
+    display: inline-flex;
+    padding: 0.625rem 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    color: var(--text, #FAFAFA);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+.details-heart {
+    border-radius: 0.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.50);
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.25rem;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.details-last {
+    width: 24.9375rem;
+    height: 11.25rem;
+    flex-shrink: 0;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.50);
+    @apply mt-[2rem]
+}
+
+.details-last1 {
+    @apply flex flex-row pt-[1.5rem] pl-[1rem] gap-[1rem]
+}
+
+.details-last1 h6 {
+
+    color: #000;
+
+    /* Title/16PX Medium */
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    /* 150% */
+}
+
+.details-last1 p {
+
+    color: #000;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.125rem;
+    /* 150% */
+    text-decoration-line: underline;
+    @apply mt-[0.5rem] mb-[1rem]
+}
+
+.hr {
+    opacity: 1rem;
+    width: 24.9375rem;
+    height: 0.0625rem;
+    background: #000;
+}
+
+.small-orange {
+    @apply w-[1.25rem] h-[2.5rem] bg-[#DB4444] rounded-[0.25rem]
+}
+
+.details-sub-head {
+    @apply flex flex-row items-center gap-[1rem] font-semibold leading-[1.5rem] text-[#DB4444] mb-[3.75rem]
+}

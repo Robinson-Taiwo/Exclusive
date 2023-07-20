@@ -84,7 +84,7 @@
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {  
     body {
         font-size: 14px;
     }
@@ -135,6 +135,10 @@
 
     .out-logo {
         @apply w-[100%] flex justify-end bg-[black]
+    }
+
+    .chose-link {
+        @apply text-[1.2rem] font-bold
     }
 
     .logo {
@@ -232,19 +236,19 @@
 
 
     .mobile-nav-links {
-        @apply mt-[1rem] gap-[1rem] flex flex-wrap flex-row w-[100%] justify-center items-center pt-[2rem]
+        @apply mt-[0.5rem] gap-[1rem] flex flex-wrap flex-row w-[100%] justify-center items-center pt-[0rem] 
     }
 
     .nav-link-mobile {
-        box-shadow: 0rem 1rem 1.58rem rgba(0, 0, 0, 0.15);
-
-        @apply bg-[white] rounded-[0.25rem] text-[black] h-[2rem] w-[4rem] justify-center items-center flex
+        /* box-shadow: 0rem 1rem 1.58rem rgba(0, 0, 0, 0.15); */
+border: 0.2rem solid rgb(207, 39, 39);
+        @apply bg-[white] rounded-[0.25rem] text-[black] h-[3rem] w-[9rem] justify-center items-center flex text-[1rem] font-medium
     }
 
     .nav-link {
-        box-shadow: 0rem 1rem 1.58rem rgba(0, 0, 0, 0.15);
+        /* box-shadow: 0rem 1rem 1.58rem rgba(0, 0, 0, 0.15); */
 
-        @apply text-[white] p-[1rem] text-center text-[1rem] w-[100%] bg-[black] font-bold mx-[2rem] mb-[1rem]
+        @apply text-[white] p-[1rem] text-center text-[1rem] w-[100%]  font-normal mx-[2rem] mb-[0rem] text-[black]
     }
 
 
@@ -253,12 +257,14 @@
     }
 
     .mobile-choose {
-        grid-template-columns: repeat(2, 1fr);
-        @apply grid gap-[1rem] px-[0.5rem] mb-[2rem]
+        /* grid-template-columns: repeat(2, 1fr); */
+        /* @apply grid gap-[1rem] px-[0.5rem] mb-[2rem] */
+        @apply flex flex-col  w-[100%]
     }
 
     .p-choose-mobile {
-        @apply bg-[#DB4444] p-[0.5rem] text-[0.8rem] text-[white] rounded-[0.25rem] shadow-2xl flex justify-center items-center w-[100%] h-[100%]
+        border-bottom: 0.02rem solid black;
+        @apply p-[1.5rem] text-[0.8rem] text-[black] rounded-[0.25rem]  flex  items-center w-[100%] h-[100%] justify-between
     }
 
     .select-choice {
@@ -266,10 +272,12 @@
     }
 
     .select-mobile {
-        box-shadow: 0rem 1rem 1.58rem rgba(0, 0, 0, 0.15);
+        /* box-shadow: 0rem 1rem 1.58rem rgba(0, 0, 0, 0.15); */
 
-        @apply flex justify-center items-center flex-col gap-[1rem]
+        @apply flex justify-center items-center flex-col gap-[1rem] mt-[0rem]
     }
+
+
 
     .user-section {
         @apply px-[3rem] flex justify-center items-center flex-col gap-[1rem] bg-[black] py-[2em] text-[white]
@@ -294,11 +302,11 @@
 @media screen and (min-width: 768px) and (max-width: 991px) {
 
     .Navbar-container {
-        @apply h-fit w-[100vw] flex flex-col
+        @apply h-fit w-[100vw] flex flex-col 
     }
 
     .white-nav {
-        @apply h-[5.75rem] border-2 flex pl-[9.38%] pr-[9.38%] justify-between hidden
+        @apply h-[5.75rem] border-2 flex pl-[9.38%] pr-[9.38%] justify-between
     }
 
 

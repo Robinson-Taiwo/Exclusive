@@ -4,7 +4,7 @@ import google from "../assets/Google.svg"
 import PageLayout from './PageLayout'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { setName, setPassword, clearForm, setEmail, setIsAuthenticated } from './Features/SignUp/SignupSlice'
+
 import { useNavigate } from 'react-router'
 import { toast } from 'react-toastify'
 import axios from 'axios'
@@ -192,7 +192,6 @@ const SignUp = () => {
 
     };
 
-    dispatch(setIsAuthenticated(isTrue))
 
 
 

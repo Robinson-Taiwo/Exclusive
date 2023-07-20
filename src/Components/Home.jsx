@@ -15,12 +15,14 @@ import second from "../assets/second-ad.png"
 
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
+import speakers from '../assets/speakers.png'
 
 import "./Home.css"
 import FlashSales from './FlashSales';
 import Carousel from 'react-multi-carousel';
 import Categories from './Categories';
 import Test from './Test';
+import Bestselling from './Bestselling';
 
 const Home = () => {
 
@@ -71,11 +73,11 @@ const Home = () => {
     {
       image: "pic2",
     },
-    
+
     {
       image: "pic8",
     },
-    
+
 
 
   ]
@@ -112,7 +114,7 @@ const Home = () => {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2
+      items: 1
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -323,7 +325,7 @@ const Home = () => {
 
           <section>
 
-            <FlashSales />
+            <Bestselling />
           </section>
 
 
@@ -446,7 +448,7 @@ const Home = () => {
                     Perfume
                   </h1>
 
-                  <p className="arive-text">
+                  <p className="arive-text ">
                     GUCCI INTENSE OUD EDP
                   </p>
 
@@ -519,7 +521,7 @@ const Home = () => {
         </section>
 
 
-        <Test />
+
 
 
 

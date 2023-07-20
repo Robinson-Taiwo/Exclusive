@@ -4,9 +4,11 @@ import search from "../assets/search.svg"
 import heart from "../assets/heart.svg"
 import cart from "../assets/cart.svg"
 import user from "../assets/user.svg"
+import up from "../assets/ups.svg"
+
 import menu from "../assets/menu.svg"
 import close from "../assets/close.svg"
-import { logout } from './Features/SignUp/SignupSlice'
+// import { logout } from './Features/SignUp/SignupSlice'
 
 
 import "./Navbar.css"
@@ -18,6 +20,7 @@ const Navbar = () => {
     const [showIcons, setShowIcons] = useState(false)
     const [isAuthenticated, setIsAuthenticated] = useState(true)
     const dispatch = useDispatch()
+    const cartItems = useSelector((state) => state.cart.items);
 
     return (
         <div className='Navbar-container'>
@@ -32,8 +35,7 @@ const Navbar = () => {
 
                     <nav className="nav-links">
                         <Link to="/" className='nav-link' >Home</Link>
-                        <Link to="/contact" className='nav-link' >Contact</Link>
-                        <Link to="/About" className='nav-link'>About</Link>
+
                         {/* <Link to="/signUp" className='nav-link'>Signup</Link>           */}
                         {isAuthenticated ? <Link to="/signUp" className='nav-link'>logout</Link> : <Link to="/signUp" className='nav-link'>Signup</Link>}
 
@@ -53,13 +55,14 @@ const Navbar = () => {
 
                             <Link to="/wishlist" className="one-icon">
 
-                                <img src={heart} alt="" className="icon " />
+                                <img src={heart} alt="" className="icon" />
+                                <span className="carto">0 </span>
                             </Link>
 
                             <Link to="/cart" className="one-icon">
 
                                 <img src={cart} alt="" className="icon" />
-                                <span className="carto">11</span>
+                                <span className="carto">{cartItems.length}</span>
                             </Link>
 
                             <Link to="/account" className="one-icon">
@@ -85,7 +88,7 @@ const Navbar = () => {
                     <div className="mobile-first-logo">
 
                         <img src={menu} alt="mennu-bar" className={showMenu ? "menu-logo" : "menu"} onClick={() => setShowMenu(!showMenu)} />
-                        <h1 className="logo">Tee's Exclusive</h1>
+                        <Link to="/" className="logo">Tee's Exclusive</Link>
                     </div>
 
 
@@ -95,7 +98,7 @@ const Navbar = () => {
 
                         <Link to="/cart" className="one-icon">
 
-                            <img src={cart} alt="" className="icon" /> <span className="carto">11</span>
+                            <img src={cart} alt="" className="icon" /> <span className="carto">{cartItems.length}</span>
 
 
                         </Link>
@@ -127,41 +130,54 @@ const Navbar = () => {
 
                         <div className="link-category">
 
-                            <h1 className="chose-link">
+                            {/* <h1 className="chose-link">
                                 select page
-                            </h1>
+                            </h1> */}
 
                             <div className="mobile-nav-links">
                                 <div className="nav-link-mobile">
 
-                                    <Link to="/"  >Home</Link>
+                                    <Link to="/"  >login</Link>
                                 </div>
-                                <div className="nav-link-mobile">
 
-                                    <Link to="/contact" >Contact</Link>
-                                </div>
-                                <div className="nav-link-mobile">
-
-                                    <Link to="/about" >About</Link>
-                                </div>
                                 <div className="nav-link-mobile">
 
                                     <Link to="/signUp" >Sign Up</Link>
                                 </div>
 
-                                <div className="nav-link-mobile">
+                                {/* <div className="nav-link-mobile">
 
-                                    <Link to="/wishlist" >Wishlist</Link>
-                                </div>
+                                   
+                                    <Link to="/wishlist" className="one-icon">
+
+                                        <img src={heart} alt="" className="icon" />
+                                        <span className="carto">0 </span>
+                                    </Link>
+                                </div> */}
 
 
 
-                                <button onClick={() => dispatch(logout)} className="nav-link">
-                                    LOG OUT
-                                </button>
 
                             </div>
+                            <button className="nav-link">
+                                <Link to="/wishlist" className="one-icon">
+
+                                    <img src={heart} alt="" className="icon" />
+                                    <span className="carto">0 </span>
+                                </Link>
+                                wishlist
+                            </button>
                         </div>
+
+                        {/* <div className="nav-link-mobile">
+
+                                   
+                                    <Link to="/wishlist" className="one-icon">
+
+                                        <img src={heart} alt="" className="icon" />
+                                        <span className="carto">0 </span>
+                                    </Link>
+                                </div> */}
 
 
 
@@ -173,41 +189,59 @@ const Navbar = () => {
                             <div className="mobile-choose">
 
                                 <p className="p-choose-mobile">
-                                    Woman's Fashion
+                                    <div className="cho-mob">
+                                        women's Fashion
+                                    </div> <img src={up} className='lop' alt="" />
                                 </p>
 
                                 <p className="p-choose-mobile">
-                                    Men's Fashion
+                                    <div className="cho-mob">
+                                        Men's Fashion
+                                    </div> <img src={up} className='lop' alt="" />
                                 </p>
 
                                 <p className="p-choose-mobile">
-                                    Electronics Fashion
+                                    <div className="cho-mob">
+                                        Electronics
+                                    </div> <img src={up} className='lop' alt="" />
                                 </p>
 
                                 <p className="p-choose-mobile">
-                                    Home & lifestyle
+                                    <div className="cho-mob">
+                                        Home & Lifestyle
+                                    </div> <img src={up} className='lop' alt="" />
                                 </p>
 
                                 <p className="p-choose-mobile">
-                                    Medicine
+                                    <div className="cho-mob">
+                                        Medicine
+                                    </div> <img src={up} className='lop' alt="" />
                                 </p>
 
                                 <p className="p-choose-mobile">
-                                    Sports & Outdoor
+                                    <div className="cho-mob">
+                                        Sports and Outdoor
+                                    </div> <img src={up} className='lop' alt="" />
                                 </p>
 
 
                                 <p className="p-choose-mobile">
-                                    Baby's & Toys
+                                    <div className="cho-mob">
+                                        Baby's and toys
+                                    </div> <img src={up} className='lop' alt="" />
                                 </p>
 
 
                                 <p className="p-choose-mobile">
-                                    Groceries & Pets
+                                    <div className="cho-mob">
+                                        Groceries and Pets
+                                    </div> <img src={up} className='lop' alt="" />
                                 </p>
 
                                 <p className="p-choose-mobile">
-                                    Health & Beauty            </p>
+                                    <div className="cho-mob">
+                                        Health & Beauty
+                                    </div> <img src={up} className='lop' alt="" />          </p>
                             </div>
 
                         </div>

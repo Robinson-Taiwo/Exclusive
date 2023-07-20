@@ -8,6 +8,7 @@ import up from "../assets/up.svg"
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./FlashSales.css"
+import ProductCard from './ProductCard'
 
 const FlashSales = () => {
 
@@ -68,60 +69,12 @@ const FlashSales = () => {
 
                     {data.map((data, index) => {
                         return (
-                            <div key={index} classNameflash-container
+                            <div key={index} className="flash-container"
                             >
 
-                                <div className={isHovered ? 'hovered' : 'flash-box'} onMouseEnter={() => setIsHovered(true)}
-                                    onMouseLeave={() => setIsHovered(false)} >
+                              
 
-                                    <div className="flash-sec1">
-
-                                        <div className="flash-inner1">
-
-                                            <div className="inner1-icons">
-
-                                                <div className="discount">
-                                                    -14%
-                                                </div>
-
-                                                <img src={heart} alt="" className="hear-cion" />
-
-                                            </div>
-
-                                            <img src={data.image} className="flash-inner2" />
-
-
-
-                                        </div>
-
-                                    </div>
-                                    <div className="flash-sec2">
-
-                                        <p className="sec2-name">
-                                            {data.title}
-                                        </p>
-
-                                        <p className="sec2-price">
-                                            {data.price}$
-                                        </p>
-
-                                        <p>
-                                            <img src={stars} alt="ratings" className="sec2-rating" />
-
-                                        </p>
-                                        <button className="add-to-cart">Add to Cart</button>
-
-                                        <p>
-
-                                        </p>
-
-
-                                    </div>
-
-
-                                </div>
-
-
+                                <ProductCard id={data.id} card={[1, 2, 3]} stars={stars} heart={heart} price={data.price} title={data.title} image={data.image} data={data} />
                             </div>
                         )
                     })}

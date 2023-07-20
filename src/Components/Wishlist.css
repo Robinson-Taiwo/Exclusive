@@ -1,0 +1,196 @@
+.Wishlist {
+    @apply pt-[5rem] px-[8.44rem]
+}
+
+.first-wishlist {
+    @apply flex flex-row justify-between items-center mb-[3.75rem]
+}
+
+.move-to-bag {
+    border: 0.0625rem solid rgba(0, 0, 0, 0.5);
+    border-radius: 0.25rem;
+    @apply h-[3.5rem] w-[13.94rem] items-center flex justify-center
+}
+
+
+
+
+
+.wishlist-slider {
+    @apply justify-center mb-[5rem] flex flex-row gap-[1.88rem]
+}
+
+.wishlist-container {
+
+    /* border: 0.1rem solid red; */
+    @apply h-[20.13rem] w-[16.88rem] mb-[1rem]
+}
+
+.wishlist-container:hover {
+    transform: scale(1.075);
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+
+.just-for-you-container {
+    @apply h-[22rem] w-[16.88rem]
+}
+
+.discount-wishlist {
+    @apply bg-[#DB4444] w-[3.44rem] h-[1.63rem] flex justify-center items-center text-[white] rounded-[0.25rem] text-[0.75rem] leading-[1.125rem] relative mt-[0.75rem]
+}
+
+/* .wishlist-container {
+    @apply flex flex-col relative
+} */
+
+.wishlist-image {
+    /* width: 11.125rem;
+height: 9.375rem; */
+    @apply w-[11.9rem] h-[11.25rem] relative top-[1.31rem]
+}
+
+.wishlist-container-one {
+    @apply h-[13.1rem] w-[100%] px-[0.75rem] flex bg-[#F5F5F5]
+}
+
+.wishlist-image-container {
+    @apply bg-[#F5F5F5]
+}
+
+.bin-icon {
+    @apply h-[2.125rem] w-[2.125rem] mt-[0.75rem]
+}
+
+.add-cart {
+    width: 16.875rem;
+    height: 2.5625rem;
+    border-radius: 0px 0px 4px 4px;
+    background: var(--button, #000);
+    color: #FFF;
+    /* Title/12PX Regular */
+    /* font-size: 0.75rem;
+    font-family: Poppins;
+    line-height: 1.125rem; */
+    @apply text-[white] flex justify-center items-center text-[0.9rem] font-[poppins]
+}
+
+.wishlist-container-title {
+    color: #000;
+    /* font-size: 1rem;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 1.5rem; */
+    @apply font-[poppins] font-bold leading-[1.5rem]
+}
+
+.wishlist-container-price {
+
+    color: var(--secondary-2, #DB4444);
+
+    /* Title/16PX Medium */
+    font-size: 1rem;
+    font-family: Poppins;
+    line-height: 1.5rem;
+    @apply font-semibold
+}
+
+
+.wishlist-container-text {
+    @apply flex flex-col gap-[0.5rem] mt-[1rem] w-[100%] items-center
+}
+
+
+.just-for-you-section {
+    @apply flex flex-col
+}
+
+.just-for-you-head {
+    @apply flex flex-row items-center justify-between w-[100%] mb-[3.75rem]
+}
+
+.just-for-you-first {
+    width: 1.25rem;
+    height: 2.5rem;
+    @apply bg-[#DB4444] rounded-[0.25rem]
+}
+
+
+.just-for-you-second {
+    color: #000;
+    text-align: center;
+    /* Title/20PX Regular */
+    font-size: 1.25rem;
+    font-family: Poppins;
+    line-height: 1.625rem;
+}
+
+.for-you-stars {
+    height: 1.25rem;
+}
+
+
+.just-for-you-left {
+    @apply gap-[1rem] items-center justify-center flex flex-row
+}
+
+.just-for-you-button {
+    display: flex;
+    padding: 1rem 3rem;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.50);
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.for-you-slider {
+    @apply h-[22.13rem] mb-[5rem] justify-center flex flex-row gap-[1.88rem]
+}
+
+@media screen and (max-width: 767px) {
+
+    .Wishlist {
+        @apply pt-[2rem] px-[1.44rem]
+    }
+
+    .first-wishlist {
+        @apply flex flex-row justify-between items-center mb-[3.75rem]
+    }
+
+    .move-to-bag {
+        border: 0.0625rem solid rgba(0, 0, 0, 0.5);
+        border-radius: 0.25rem;
+        @apply h-[2.5rem] w-[6.94rem] items-center flex justify-center text-[0.8rem]
+    }
+
+    .wishlist-slider {
+        @apply h-[20.13rem]
+    }
+
+    .wishlist-container {
+        outline: 0.5rem solid red;
+        @apply h-[26rem] w-[16.88rem]
+    }
+
+    .discount-wishlist {
+        @apply bg-[#DB4444] w-[3.44rem] h-[1.63rem] flex justify-center items-center text-[white] rounded-[0.25rem] text-[0.75rem] leading-[1.125rem] top-[4rem] relative
+    }
+
+    .wishlist-container {
+        @apply flex flex-col relative
+    }
+
+    .wishlist-image {
+        @apply w-[11.9rem] h-[11.25rem] bg-transparent
+    }
+
+    .wishlist-container-one {
+        @apply h-[13.1rem] w-[100%] flex flex-row px-[0.75rem]
+    }
+
+    .bin-icon {
+        @apply h-[2.125rem] w-[2.125rem] relative
+    }
+
+}
