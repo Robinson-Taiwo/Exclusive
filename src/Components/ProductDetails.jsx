@@ -10,29 +10,61 @@ import white3 from "../assets/white3.png"
 import white4 from "../assets/white4.png"
 import stars from '../assets/stars.svg'
 import minus from '../assets/icon-minus.svg'
+import cart from '../assets/cart.svg'
 import plus from '../assets/icon-plus.svg'
 import wishlist from '../assets/Wishlist.svg'
 import Delivery from '../assets/icon-delivery.svg'
 import ret from "../assets/return.svg"
 
 import NotFound from './NotFound';
+import { useDispatch, useSelector } from 'react-redux'
+import { decreaseItemQuantity, increaseItemQuantity, clearCart, addItemToCart } from './Cart/CartSlice'
+
 import "./ProductDetails.css"
 import FlashSales from './FlashSales';
 
 const ProductDetails = () => {
-    const { id } = useParams();
+    const { ids } = useParams();
     const navigate = useNavigate();
+    const dispatch = useDispatch()
 
-    const product = products.find((p) => p.id === parseInt(id));
+    const product = products.find((p) => p.id === parseInt(ids));
 
-    // if (!product) {
-    //     useEffect(
-    //         navigate("/Notfound"), []
-    //     )
-    // }
+    const cartItems = useSelector((state) => state.cart.items);
+
+    // const {itemid} = useSelector((state) => state.cart.items.id);
+
+    const { quantity, id, image, price, title } = useSelector(state => state.cart.items)
+
+
+    const handleDecreaseQuantity = (product) => {
+        dispatch(decreaseItemQuantity({ id: product.id }));
+    };
+
+    const handleIncreaseQuantity = (product) => {
+        dispatch(increaseItemQuantity({ id: product.id }));
+    };
+
+    const itemInCart = cartItems.find((item) => item.id === product.id);
+
+    const getQuantityInCart = (product) => {
+        const itemInCart = cartItems.find((item) => item.id === product.id);
+        return itemInCart ? itemInCart.quantity : 0;
+    };
+
+    const handleAddToCartl = () => {
+        dispatch(addItemToCart(product.id));
+        console.log(cartItems)
+    };
+
+    const handleAddToCart = () => {
+        console.log(dispatch(addItemToCart(product)));
+        console.log(cartItems)
+    };
+
 
     if (!product) {
-        return <div><NotFound /></div>;
+        return <div><NotFound /></div>
     }
     return (
 
@@ -105,16 +137,16 @@ const ProductDetails = () => {
                             {product.title}
                         </h1>
 
-                        <p className="details-review">
+                        <div className="details-review">
                             <img src={stars} alt="" className="details-star" /> <p className='details-counting'>({product.rating.count} reviews)</p>
                             <p>|</p>
                             <p className="details-instock">
                                 In stock
                             </p>
-                        </p>
+                        </div>
 
                         <p className="details-price">
-                            ${product.price}0   
+                            ${product.price}0
                         </p>
 
                         <p className="details-description">
@@ -127,15 +159,16 @@ const ProductDetails = () => {
 
                             <div className="details-ammount">
 
-                                <button className="details-minus">
+                                {itemInCart ? (<button onClick={() => handleDecreaseQuantity(product)} className="details-minus">
                                     <img src={minus} alt="" className="icon-minus" />
                                 </button>
+                                ) : (<img className='aladin' onClick={() => handleAddToCart()} src={cart} />)}
 
                                 <div className="details-number">
-                                    2
+                                    {getQuantityInCart(product)}
                                 </div>
 
-                                <button className="details-plus">
+                                <button onClick={() => handleIncreaseQuantity(product)} className="details-plus">
                                     <img src={plus} alt="" className="icon-minus" />
                                 </button>
 

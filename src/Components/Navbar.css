@@ -4,39 +4,95 @@
 
 .black-nav {
     border-bottom: 0.031rem solid #000000;
-    @apply h-[3rem] w-[100vw] bg-[black] flex justify-center items-center text-[white]
+    @apply h-[3rem]  w-[100vw] bg-[black] flex justify-center items-center text-[white]  phone:text-[0.75rem] phone:text-center desktop:text-[0.9rem]
 }
+
+
 
 .white-nav {
-    @apply h-[5.75rem] border-2 flex pl-[9.38%] pr-[9.38%] justify-between
+    @apply h-[5.75rem] phone:hidden border-2 desktop:flex pl-[9.38%] pr-[9.38%] justify-between desktop:justify-between
 }
 
-.mobile-white-nav {
+/* .white-nav {
     @apply h-[5.75rem] border-2 flex pl-[9.38%] pr-[9.38%] justify-between hidden
-}
-
-.mid-nav {
-    @apply flex flex-row h-[2.38rem] mt-[2.5rem] justify-between w-[100%]
-}
-
-.logo {
-    @apply font-bold text-[1.5rem] leading-[1.5rem]
-}
-
-/* .menu {
-    @apply 
 } */
 
-.nav-links {
-    @apply gap-[3rem] flex
+
+.mobile-white-nav {
+    @apply h-[5.75rem] border-2  desktop:hidden pl-[9.38%] pr-[9.38%] phone:justify-between flex phone:pl-[4.38%] phone:pr-[4.38%] phone:flex-col 
 }
+
+/* .mobile-white-nav {
+    @apply h-[5.75rem] border-2 flex pl-[4.38%] pr-[4.38%] flex-col
+} */
+
+.mid-nav {
+    @apply flex flex-row h-[2.38rem] phone:mt-[0rem] desktop:mt-[2.5rem] justify-between w-[100%] phone:h-[80%]
+}
+
+.mobile-first-logo {
+    @apply flex flex-row gap-[0.75rem] mt-[0.5rem] text-[1rem] 
+}
+
+
+/* .mid-nav {
+    @apply flex flex-row h-[80%] mt-[0rem] items-center justify-between w-[100%]
+} */
+
+.logo {
+    @apply font-bold text-[1.5rem] phone:leading-[1rem] phone:text-[1rem] phone:mt-[0.5rem]  leading-[1.5rem]
+}
+
+/* .logo {
+    @apply font-bold text-[1rem] leading-[1rem]
+} */
+
+.menu {
+    @apply phone:h-[1.5rem] phone:w-[1.5rem] phone:mt-[0.4rem]
+}
+
+.nav-links {
+    @apply gap-[3rem] desktop:flex phone:hidden
+}
+
+/* .nav-links {
+    @apply gap-[3rem] flex hidden
+} */
+
+
+.show-mobile-menubar {
+    overflow-y: auto;
+    overflow: scroll;
+    transition: all 0.5s ease-out;
+    z-index: 2;
+    border: 0.08rem solid rgb(207, 39, 39);
+    @apply absolute phone:block list-none bg-[white] left-0 top-[0rem] w-[90%] h-[100%]
+}
+
+
+.third-row {
+    @apply flex h-[100%] justify-center 
+}
+
+.third-rowl {
+    @apply flex flex-row justify-between
+}
+
+
 
 .nav-link {
-    @apply leading-[1.5rem] font-normal
+    @apply leading-[1.5rem] font-normal phone:text-[white]
 }
 
+
+
+/* .nav-link {
+
+    @apply text-[white] p-[1rem] text-center text-[1rem] w-[100%]  font-normal mx-[2rem] mb-[0rem] text-[black]
+} */
+
 .form {
-    @apply flex bg-[#f5f5f5] pt-[0.43rem] pb-[0.43rem] pl-[1.25rem] pr-[0.75rem] rounded-[0.25rem]
+    @apply flex bg-[#f5f5f5] pt-[0.43rem] pb-[0.43rem] pl-[1.25rem] pr-[0.75rem] rounded-[0.25rem] phone:w-[30rem] phone:h-[2.5rem] phone:flex phone:flex-row phone:justify-between desktop:mr-[2rem]
 }
 
 .search-input::placeholder {
@@ -60,13 +116,13 @@
     outline: none;
 }
 
-.third-row {
+/* .third-row {
     @apply flex flex-row gap-[1.5rem]
-}
+} */
 
 
 .nav-icons {
-    @apply flex flex-row gap-[1rem]
+    @apply flex flex-row justify-center  h-[100%]
 }
 
 
@@ -76,21 +132,74 @@
 
 
 .one-icon {
-    @apply p-[0.43rem] flex items-center justify-center
+    @apply  p-[0.43rem] flex items-center justify-center h-[100%]
+}
+
+.icon {
+    @apply  phone:h-[1.7rem]  desktop:mb-[1.5rem] flex items-center justify-center
+}
+
+.miliano{
+    @apply phone:mt-[0.3rem]
 }
 
 .carto {
     @apply items-center text-[0.7rem] justify-center flex bg-[#DB4444] relative rounded-[50%] top-[-0.5rem] left-[-0.65rem] h-[1.4rem] w-[1.4rem] text-white
 }
 
+.out-logo {
+    @apply w-[100%] flex justify-end bg-[black]
+}
 
+.user-section {
+    @apply px-[3rem] flex justify-center items-center flex-col gap-[1rem] bg-[black] py-[2em] text-[white]
+}
+
+.user-name {
+    @apply font-bold
+}
+
+
+.link-category {
+    @apply flex justify-center items-center flex-col
+}
+
+.mobile-nav-links {
+    @apply mt-[0.5rem] gap-[1rem] flex flex-wrap flex-row w-[100%] justify-center items-center pt-[0rem] 
+}
+
+.nav-link-mobile {
+border: 0.2rem solid rgb(207, 39, 39);
+    @apply bg-[white] rounded-[0.25rem] text-[black] h-[3rem] w-[9rem] justify-center items-center flex text-[1rem] font-medium
+}
+
+.select-mobile {
+
+    @apply flex justify-center items-center flex-col gap-[1rem] mt-[0rem]
+}
+
+.select-choice {
+    @apply text-[#DB4444] text-[1.2rem] font-bold
+}
+
+.mobile-choose {
+    @apply flex flex-col  w-[100%]
+}
+
+.p-choose-mobile {
+    border-bottom: 0.02rem solid black;
+    @apply p-[1.5rem] tablet:text-[1rem] text-[0.8rem] text-[black] rounded-[0.25rem]  flex  items-center w-[100%] h-[100%] justify-between
+}
+
+
+/* 
 @media screen and (max-width: 767px) {  
     body {
         font-size: 14px;
     }
 
     .Navbar-container {
-        @apply h-fit w-[100vw] flex flex-col
+        @apply h-fit w-[100vw] flex flex-col 
     }
 
     .white-nav {
@@ -170,9 +279,7 @@
         outline: none;
     }
 
-    /* .one-icon {
-        @apply flex flex-col
-    } */
+  
 
     .icon {
         @apply h-[1.5rem] w-[1.5rem]
@@ -191,11 +298,7 @@
     }
 
 
-    /* .show-mobile-menu {
-        transition: all 0.5s ease-out;
-        @apply absolute block w-[100vw] h-[100vw] bg-[black] top-[3rem] left-[0rem] opacity-100
-    } */
-
+ 
 
     .show-mobile-menubar {
         overflow-y: auto;
@@ -210,20 +313,6 @@
         @apply h-[1.5rem] w-[1.5rem] block top-[4rem] absolute
     }
 
-
-    /* 
-    .show-mobile-menu {
-        position: absolute;
-        
-        top: 0;
-        left: 0;
-        width: 90%;
-        height: 90%;
-        background-color: #005469;
-        z-index: 9999;
-        display: block;
-        align-items: center;
-    } */
 
     .modal {
         transition: all 0.5s ease-out;
@@ -240,13 +329,11 @@
     }
 
     .nav-link-mobile {
-        /* box-shadow: 0rem 1rem 1.58rem rgba(0, 0, 0, 0.15); */
 border: 0.2rem solid rgb(207, 39, 39);
         @apply bg-[white] rounded-[0.25rem] text-[black] h-[3rem] w-[9rem] justify-center items-center flex text-[1rem] font-medium
     }
 
     .nav-link {
-        /* box-shadow: 0rem 1rem 1.58rem rgba(0, 0, 0, 0.15); */
 
         @apply text-[white] p-[1rem] text-center text-[1rem] w-[100%]  font-normal mx-[2rem] mb-[0rem] text-[black]
     }
@@ -257,8 +344,7 @@ border: 0.2rem solid rgb(207, 39, 39);
     }
 
     .mobile-choose {
-        /* grid-template-columns: repeat(2, 1fr); */
-        /* @apply grid gap-[1rem] px-[0.5rem] mb-[2rem] */
+  
         @apply flex flex-col  w-[100%]
     }
 
@@ -272,7 +358,6 @@ border: 0.2rem solid rgb(207, 39, 39);
     }
 
     .select-mobile {
-        /* box-shadow: 0rem 1rem 1.58rem rgba(0, 0, 0, 0.15); */
 
         @apply flex justify-center items-center flex-col gap-[1rem] mt-[0rem]
     }
@@ -302,11 +387,11 @@ border: 0.2rem solid rgb(207, 39, 39);
 @media screen and (min-width: 768px) and (max-width: 991px) {
 
     .Navbar-container {
-        @apply h-fit w-[100vw] flex flex-col 
+        @apply h-fit w-[100vw] flex flex-col  
     }
 
     .white-nav {
-        @apply h-[5.75rem] border-2 flex pl-[9.38%] pr-[9.38%] justify-between
+        @apply h-[5.75rem] border-2 flex pl-[9.38%] pr-[9.38%] justify-between hidden
     }
 
 
@@ -428,9 +513,7 @@ border: 0.2rem solid rgb(207, 39, 39);
         @apply font-bold text-[1.5rem] leading-[1.5rem]
     }
 
-    /* .menu {
-        @apply 
-    } */
+ 
 
     .nav-links {
         @apply gap-[2rem] flex
@@ -516,9 +599,6 @@ border: 0.2rem solid rgb(207, 39, 39);
         @apply font-bold text-[1.5rem] leading-[1.5rem]
     }
 
-    /* .menu {
-        @apply 
-    } */
 
     .nav-links {
         @apply gap-[3rem] flex
@@ -574,4 +654,4 @@ border: 0.2rem solid rgb(207, 39, 39);
 
 
 
-}
+} */

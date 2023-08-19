@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import PageLayout from './PageLayout'
 // import images from "./data"
-import ProfileData from "./data"
+import advert from "./AdData"
 import pic8 from "../assets/pic8.jpg"
 import pic2 from "../assets/pic2.jpg"
 import up from "../assets/up.svg"
@@ -23,6 +23,8 @@ import Carousel from 'react-multi-carousel';
 import Categories from './Categories';
 import Test from './Test';
 import Bestselling from './Bestselling';
+import { Link } from 'react-router-dom';
+import Data from './data';
 
 const Home = () => {
 
@@ -63,24 +65,31 @@ const Home = () => {
   const secondsRemaining = timeLeft % 60;
 
   const ProfileData = [
-
-
-
     {
-      image: "ad",
+      id: 1,
+      title: "Image 1",
+      url: "https://unsplash.com/photos/GG1FJwV67PA",
+      description: "This is the first image.",
     },
-
     {
-      image: "pic2",
+      id: 2,
+      title: "Image 2",
+      url: "https://unsplash.com/photos/_uB9B5GXhbY",
+      description: "This is the second image.",
     },
-
     {
-      image: "pic8",
+      id: 3,
+      title: "Image 3",
+      url: "https://unsplash.com/photos/cBvVzF5orr8",
+      description: "This is the third image.",
     },
-
-
-
-  ]
+    {
+      id: 4,
+      title: "Image 4",
+      url: "https://unsplash.com/photos/iXFCE37pASE",
+      description: "This is the fourth image.",
+    },
+  ];
 
   const responsive = {
     superLargeDesktop: {
@@ -183,10 +192,10 @@ const Home = () => {
 
             <Carousel responsive={responsivead} arrows={false} showDots={true} autoPlay={true} className="advert-slides" swipeable={true} dotListClass='dotun' containerClass='zi'  >
 
-              {ProfileData.map((data, index) => {
+              {advert.map((data, index) => {
                 return (
                   <div className='ad-slid' key={index}>
-                    <img src={`src/assets/${data.image}.jpg`} alt="" className="ad-slide-image" />
+                    <img src={second} alt={data.title} className="ad-slide-image" />
                   </div>
                 )
               })}
@@ -272,9 +281,9 @@ const Home = () => {
             </div>
 
             <div className="view-all-div">
-              <button className="view-all">
+              <Link to="/Products" className="view-all">
                 view all products
-              </button>
+              </Link>
             </div>
 
           </div>
@@ -325,7 +334,7 @@ const Home = () => {
 
           <section>
 
-            <Bestselling />
+            <FlashSales />
           </section>
 
 

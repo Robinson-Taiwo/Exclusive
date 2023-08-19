@@ -1,0 +1,19 @@
+.splash {
+    background: linear-gradient(90deg, white 0.97%, rgb(230, 201, 201) 46.41%, rgb(192, 186, 186) 101.25%);
+    @apply flex h-[100vh] w-[100vw] items-center justify-center 
+}
+
+.splash-text {
+    border-radius: 50%;
+    /* background: linear-gradient(90deg, #e64e4e 0.97%, #db4e4e 46.41%, #501e1e 101.25%); */
+
+    @apply h-[15rem] animate-bounce w-[15rem]  flex items-center justify-center flex-col gap-[0.5rem]
+}
+
+.splash-text p {
+    @apply text-[0.8rem] ml-[3rem]
+}
+
+.splash-text h1 {
+    @apply text-[1.6rem] font-bold
+}

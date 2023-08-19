@@ -4,13 +4,13 @@ import "./PageLayout.css"
 
 const PageLayout = ({ children }) => {
     return (
-        <div className="flex flex-col overflow-hidden w-screen h-screen">
-            <main className=" boy flex-grow overflow-auto">
+        <main className="flex flex-col overflow-hidden w-screen h-screen">
+            <div className=" boy flex-grow overflow-auto">
                 <Navbar />
                 {children}
                 <Footer />
-            </main>
-        </div>
+            </div>
+        </main>
     );
 };
 

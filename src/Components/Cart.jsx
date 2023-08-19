@@ -5,7 +5,11 @@ import television from "../assets/television.png"
 import playstation from '../assets/playstation.png'
 import down from "../assets/down.svg"
 import up from "../assets/ups.svg"
-import { decreaseItemQuantity, increaseItemQuantity, clearCart } from './Cart/CartSlice'
+import { decreaseItemQuantity, increaseItemQuantity, removeItemFromCart } from './Cart/CartSlice'
+import minus from '../assets/icon-minus.svg'
+import cart from '../assets/cart.svg'
+import plus from '../assets/icon-plus.svg'
+
 import data from "./data"
 import "./Cart.css"
 import { useDispatch, useSelector } from 'react-redux'
@@ -30,7 +34,7 @@ const Cart = () => {
   };
 
   const handleClearCart = () => {
-    dispatch(handleClearCart());
+    dispatch(clearCart());
   };
 
   function roundUpToTwoDecimalPlaces(number) {
@@ -58,54 +62,60 @@ const Cart = () => {
         </div>
 
         {cartItems.length === 0 ? (
-          <p>Your cart is empty.</p>
+
+          <div className='empty-cart'><p >Your cart is empty.</p></div>
+
         ) : (
           <section className="cart-container">
 
 
             <table className='table' >
 
-              <tr className='table-head' >
+              <thead>
+                <tr className='table-head' >
 
-                <td>Product</td>
-                <td>Price</td>
-                <td>Quantity</td>
-                <td>Sub total</td>
-              </tr>
+                  <td>Product</td>
+                  <td>Price</td>
+                  <td>Quantity</td>
+                  <td>Sub total</td>
+                </tr>
+              </thead>
 
               {cartItems.map(item => {
                 return (
 
-                  <tr key={item.id} className='h-[6.4rem] mb-[2.5rem]'>
+                  <tbody key={item.id}>
+                    <tr className='h-[6.4rem] mb-[2.5rem]'>
 
-                    <td className='cart-header-title'> <img src={item.image} alt="" className="cart-product-icon" />
-                      <span className="container-header">{item.title}</span></td>
-                    <td>${item.price}</td>
-                    <td>
+                      <td className='cart-header-title'> <img src={item.image} alt="" className="cart-product-icon" />
+                        <span className="container-header"><Link to={`/products/${item.id}`}>{item.title}</Link></span></td>
+                      <td>${item.price}</td>
+                      <td>
 
-                      <div className="cart-actions">
-                        <div className="cart-actions-one">
-                          {item.quantity}
+                        <div className="cart-actions">
+                          <div className="cart-actions-one">
+                            {item.quantity}
+                          </div>
+
+                          <div className="cart-actions-button">
+
+                            <button onClick={() => dispatch(increaseItemQuantity(item))} >
+                              <img src={up} alt="" className="drop-up" />
+                            </button>
+
+                            <button onClick={() => dispatch(decreaseItemQuantity(item))} >
+
+                              <img src={down} alt="" className="drop-up" />
+                            </button>
+
+
+                          </div>
                         </div>
+                      </td>
+                      <td>{roundUpToTwoDecimalPlaces(item.price * item.quantity)}</td>
+                    </tr>
 
-                        <div className="cart-actions-button">
-
-                          <button onClick={() => dispatch(increaseItemQuantity(item))} >
-                            <img src={up} alt="" className="drop-up" />
-                          </button>
-
-                          <button onClick={() => dispatch(decreaseItemQuantity(item))} >
-
-                            <img src={down} alt="" className="drop-up" />
-                          </button>
-
-
-                        </div>
-                      </div>
-                    </td>
-                    <td>{roundUpToTwoDecimalPlaces(item.price * item.quantity)}</td>
-                  </tr>
-
+                  </tbody>
                 )
               })}
 
@@ -139,42 +149,9 @@ const Cart = () => {
             <td>$650</td>
           </tr> */}
 
-              {/* <tr className='h-[6.4rem]'>
-
-            <td className='cart-header-title'> <img src={television} alt="" className="cart-product-icon" />
-              <span className="container-header">LCD Monitor</span></td>
-            <td>$650</td>
-            <td>
-
-              <div className="cart-actions">
-                <div className="cart-actions-one">
-                  {number}
-                </div>
-
-                <div className="cart-actions-button">
-
-                  <button onClick={() => setNumber(number + 1)} >
-                    <img src={up} alt="" className="drop-up" />
-                  </button>
-
-                  <button onClick={() => setNumber(number - 1)} >
-
-                    <img src={down} alt="" className="drop-up" />
-                  </button>
-
-
-                </div>
-              </div>
-
-
-
-            </td>
-            <td>$650</td>
-          </tr> */}
-
-
-
             </table>
+
+
 
             <section className="cart-button">
               <button className="update-cart">
@@ -190,6 +167,72 @@ const Cart = () => {
 
           </section>
         )}
+
+
+
+
+        <section className="cart-phone-container">
+
+          <div className="phone-cart-img">
+            {cartItems.map(item => {
+              return (
+
+                <div className='phone-all-cart' key={item.id}>
+
+                  <div className="phone-sub-cart">
+
+
+                    <div className="phone-cart-image">
+
+                      {/* <div onClick={dispatch(removeItemFromCart(item))} className="rel">
+                        remove
+                      </div> */}
+
+                      <img src={item.image} alt="" className="cart-product-icon" />
+                    </div>
+
+                    <div className="phone-cart-info">
+                      <div className="container-header"><Link to={`/products/${item.id}`}>{item.title}</Link></div>
+                      <p className='phone-cart-price' >${item.price}</p>
+                      <p className="details-instock">
+                        In stock
+                      </p>
+                      <p className="seller"> JUMIA </p>
+                    </div>
+
+                  </div>
+
+                  <div className="phone-cart-down">
+
+
+                    <div className="details-ammount">
+
+                      <button onClick={() => dispatch(decreaseItemQuantity(item))} className="details-minus">
+                        <img src={minus} alt="" className="icon-minus" />
+                      </button>
+
+
+                      <div className="details-number">
+                        {item.quantity}
+                      </div>
+
+                      <button onClick={() => dispatch(increaseItemQuantity(item))} className="details-plus">
+                        <img src={plus} alt="" className="icon-minus" />
+                      </button>
+
+                    </div>
+                  </div>
+
+
+                </div>
+              )
+            })}
+          </div>
+
+
+
+        </section>
+
 
 
 
@@ -245,9 +288,9 @@ const Cart = () => {
             </div>
 
 
-            <button className="checkout">
+            <Link to="/checkout" className="checkout">
               Process to checkout
-            </button>
+            </Link>
 
           </div>
 

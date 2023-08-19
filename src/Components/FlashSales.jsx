@@ -15,7 +15,6 @@ const FlashSales = () => {
 
     const [isHovered, setIsHovered] = useState(false);
 
-
     const responsivenesss = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
@@ -41,9 +40,6 @@ const FlashSales = () => {
         }
     };
 
-
-
-
     const reference = useRef()
 
     const next = () => {
@@ -65,15 +61,12 @@ const FlashSales = () => {
                 <img src={up} alt="" className="pup-arrow rotate-90 " />
             </button>
             <div className="flash-boxe">
-                <Carousel ref={reference} arrows={false} renderButtonGroupOutside={true} responsive={responsivenesss} swipeable={true} draggable={true} containerClass='lola' itemClass='amebo' >
+                <Carousel ref={reference} arrows={false} renderButtonGroupOutside={true} responsive={responsivenesss} swipeable={true} keyBoardControl={true} draggable={true} containerClass='lola' itemClass='amebo' >
 
                     {data.map((data, index) => {
                         return (
                             <div key={index} className="flash-container"
                             >
-
-                              
-
                                 <ProductCard id={data.id} card={[1, 2, 3]} stars={stars} heart={heart} price={data.price} title={data.title} image={data.image} data={data} />
                             </div>
                         )
@@ -82,12 +75,7 @@ const FlashSales = () => {
                 </Carousel>
             </div>
 
-
-
-
         </div>
-
-
 
     )
 }

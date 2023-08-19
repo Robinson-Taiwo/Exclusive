@@ -4,6 +4,8 @@ import stars from '../assets/stars.svg'
 import trash from "../assets/bin.svg"
 import { useDispatch, useSelector } from 'react-redux';
 import { addItemToCart } from './Cart/CartSlice';
+import { toast } from 'react-toastify'
+
 import "./ProductCard.css"
 import { Link } from 'react-router-dom'
 
@@ -18,6 +20,8 @@ const ProductCard = ({ data, id, stars, image, price, title, heart }) => {
 
     const handleAddToCart = () => {
         console.log(dispatch(addItemToCart(data)));
+        toast.success('product added successfully.')
+
         console.log(cartItems)
     };
 
@@ -58,7 +62,7 @@ const ProductCard = ({ data, id, stars, image, price, title, heart }) => {
                 <Link to={`/products/${id}`} className="product-container-text">
 
                     <p className="product-container-title">
-                        <Link to={`/products/${id}`}>{title} </Link>
+                        {title}
                     </p>
 
                     <p className="product-container-price">

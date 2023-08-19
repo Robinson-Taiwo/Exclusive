@@ -31,18 +31,18 @@ const Navbar = () => {
 
                 <div className="mid-nav">
 
-                    <h1 className="logo">Tee's Exclusive</h1>
+                    <Link to="/" className="logo">Tee's Exclusive</Link>
 
-                    <nav className="nav-links">
+                    {/* <nav className="nav-links">
                         <Link to="/" className='nav-link' >Home</Link>
 
-                        {/* <Link to="/signUp" className='nav-link'>Signup</Link>           */}
+                       
                         {isAuthenticated ? <Link to="/signUp" className='nav-link'>logout</Link> : <Link to="/signUp" className='nav-link'>Signup</Link>}
 
 
-                    </nav>
+                    </nav> */}
 
-                    <div className="third-row">
+                    <div className="third-rowl">
 
                         <form className="form">
                             <input className='search-input' type="text" placeholder='what are you looking for?' />
@@ -103,8 +103,8 @@ const Navbar = () => {
 
                         </Link>
 
-                        <Link to="/account" className="one-icon">
-                            <img src={user} alt="" className="icon" />
+                        <Link to="/account" className="onel-icon">
+                            <img src={user} alt="" className="icon miliano" />
 
                         </Link>
 
@@ -130,9 +130,7 @@ const Navbar = () => {
 
                         <div className="link-category">
 
-                            {/* <h1 className="chose-link">
-                                select page
-                            </h1> */}
+
 
                             <div className="mobile-nav-links">
                                 <div className="nav-link-mobile">
@@ -188,60 +186,60 @@ const Navbar = () => {
 
                             <div className="mobile-choose">
 
-                                <p className="p-choose-mobile">
-                                    <div className="cho-mob">
+                                <div className="p-choose-mobile">
+                                    <p className="cho-mob">
                                         women's Fashion
-                                    </div> <img src={up} className='lop' alt="" />
-                                </p>
+                                    </p> <img src={up} className='lop' alt="" />
+                                </div>
 
-                                <p className="p-choose-mobile">
-                                    <div className="cho-mob">
+                                <div className="p-choose-mobile">
+                                    <p className="cho-mob">
                                         Men's Fashion
-                                    </div> <img src={up} className='lop' alt="" />
-                                </p>
+                                    </p> <img src={up} className='lop' alt="" />
+                                </div>
 
-                                <p className="p-choose-mobile">
-                                    <div className="cho-mob">
+                                <div className="p-choose-mobile">
+                                    <p className="cho-mob">
                                         Electronics
-                                    </div> <img src={up} className='lop' alt="" />
-                                </p>
+                                    </p> <img src={up} className='lop' alt="" />
+                                </div>
 
-                                <p className="p-choose-mobile">
-                                    <div className="cho-mob">
+                                <div className="p-choose-mobile">
+                                    <p className="cho-mob">
                                         Home & Lifestyle
-                                    </div> <img src={up} className='lop' alt="" />
-                                </p>
+                                    </p> <img src={up} className='lop' alt="" />
+                                </div>
 
-                                <p className="p-choose-mobile">
-                                    <div className="cho-mob">
+                                <div className="p-choose-mobile">
+                                    <p className="cho-mob">
                                         Medicine
-                                    </div> <img src={up} className='lop' alt="" />
-                                </p>
+                                    </p> <img src={up} className='lop' alt="" />
+                                </div>
 
-                                <p className="p-choose-mobile">
-                                    <div className="cho-mob">
+                                <div className="p-choose-mobile">
+                                    <p className="cho-mob">
                                         Sports and Outdoor
-                                    </div> <img src={up} className='lop' alt="" />
-                                </p>
+                                    </p> <img src={up} className='lop' alt="" />
+                                </div>
 
 
-                                <p className="p-choose-mobile">
-                                    <div className="cho-mob">
+                                <div className="p-choose-mobile">
+                                    <p className="cho-mob">
                                         Baby's and toys
-                                    </div> <img src={up} className='lop' alt="" />
-                                </p>
+                                    </p> <img src={up} className='lop' alt="" />
+                                </div>
 
 
-                                <p className="p-choose-mobile">
-                                    <div className="cho-mob">
+                                <div className="p-choose-mobile">
+                                    <p className="cho-mob">
                                         Groceries and Pets
-                                    </div> <img src={up} className='lop' alt="" />
-                                </p>
+                                    </p> <img src={up} className='lop' alt="" />
+                                </div>
 
-                                <p className="p-choose-mobile">
-                                    <div className="cho-mob">
+                                <div className="p-choose-mobile">
+                                    <p className="cho-mob">
                                         Health & Beauty
-                                    </div> <img src={up} className='lop' alt="" />          </p>
+                                    </p> <img src={up} className='lop' alt="" />          </div>
                             </div>
 
                         </div>

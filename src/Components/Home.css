@@ -19,12 +19,12 @@
 }
 
 .choose {
-    @apply flex flex-col gap-[1rem] pt-[2.5rem] w-[15.1%]
+    @apply flex flex-col  gap-[1rem] pt-[2.5rem] w-[15.1%]
 }
 
 .p-choose {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    @apply leading-[1.5rem] text-[1rem]
+    @apply leading-[1rem] text-[1rem] tablet:text-[0.8rem] 
 }
 
 .first-row {
@@ -37,27 +37,28 @@
     @apply ml-[3.125%]
 }
 
-.advert {
-    /* background-image: url(../assets/ad.png); */
+/* .advert {
     @apply h-[21.5rem] w-[76.24%] ml-[3.125%] mt-[2.5rem] bg-center bg-no-repeat relative
-}
+} */
 
 .ad-slid {
-    @apply h-[21.5rem] w-[100%] flex items-center justify-center object-contain
+    
+    @apply h-[21.5rem] w-[100%] flex items-center justify-center object-cover 
 }
 
 .ad-slide-image {
-    @apply h-[100%] w-[100%] object-center
+    @apply h-[100%] w-[100%] object-contain  bg-[white] flex justify-center items-center
 }
 
 .advert-slider {
-    @apply h-[21.5rem] w-[76.24%] ml-[3.125%] mt-[2.5rem] bg-center bg-no-repeat bg-contain
+    @apply h-[21.5rem] w-[76.24%] ml-[3.125%] mt-[2.5rem] bg-center bg-no-repeat 
 }
 
 .advert-slides {
     height: 100%;
     width: 100%;
-    background-size: contain;
+  
+    
 }
 
 .dotun button {
@@ -94,25 +95,6 @@
     @apply bg-[#DB4444] !important
 }
 
-/* .slick-dots {
-    @apply h-[1rem] w-[1rem] bg-[red] !important
-}
-
-
-
-.slick-prev:before {
-    color: red;
-}
-
-.slick-prev:after {
-    color: red;
-    background: #000;
-    height: 4rem;
-} */
-
-/* .slick-active {
-    background-color: red !important;
-} */
 
 .home-2 {
     @apply flex flex-col
@@ -129,6 +111,10 @@
 .big-head {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     @apply text-[2.25rem] font-semibold flex flex-row gap-[5.43rem] items-center mb-[2.5rem] pl-[9.38%]
+}
+
+.d-head{
+    @apply tablet:text-[1.5rem]
 }
 
 .d-time {
@@ -227,7 +213,7 @@
 }
 
 .view-all-2 {
-    @apply flex items-center justify-center bg-[#DB4444] h-[3.5rem] w-[9.94rem] text-white rounded-[0.25rem]
+    @apply flex items-center justify-center bg-[#DB4444] desktop:h-[3.5rem] desktop:w-[9.94rem] text-white rounded-[0.25rem] tablet:h-[2.8rem] tablet:w-[8rem]
 }
 
 
@@ -254,8 +240,10 @@
 
 
 .arrival {
-    @apply h-[37.5rem] flex flex-row justify-center
+    @apply h-[37.5rem]  flex flex-row justify-center tablet:gap-[1rem]
 }
+
+/*  */
 
 .arrival-two {
     @apply flex flex-col gap-[2.5rem] h-[100%]
@@ -263,12 +251,12 @@
 
 .arrival-one {
     background-image: url(../assets/station.png);
-    @apply w-[35.63rem] h-[37.5rem] bg-cover bg-center bg-no-repeat p-[2rem] flex flex-col gap-[1rem] justify-end
+    @apply w-[35.63rem] h-[37.5rem] bg-cover bg-center bg-no-repeat p-[2rem] flex flex-col gap-[1rem] justify-end tablet:h-[30rem] tablet:w-[30rem]
 }
 
 .arrival2-a {
     background-image: url(../assets/blackhat.png);
-    @apply bg-cover bg-center bg-no-repeat h-[17.15rem] w-[35.63rem] p-[2rem] flex flex-col gap-[1rem] justify-end
+    @apply bg-cover  bg-center bg-no-repeat h-[17.15rem] w-[35.63rem] p-[2rem] flex flex-col gap-[1rem] justify-end tablet:h-[14rem]
 }
 
 .arrival2-b {
@@ -282,7 +270,7 @@
 
 .speakers {
     background-image: url(../assets/speak.png);
-    @apply bg-cover bg-center bg-no-repeat p-[2rem] flex flex-col gap-[1rem] justify-end
+    @apply bg-cover bg-center bg-no-repeat desktop:p-[2rem] tablet:p-[0.5rem] flex flex-col gap-[1rem] justify-end
 }
 
 
@@ -424,7 +412,7 @@
     }
 
     .d-head {
-        @apply text-[1rem]
+        @apply text-[1rem] 
     }
 
     .big-head {

@@ -12,12 +12,12 @@
 }
 
 .categories-box {
-    @apply h-[9.0625rem] w-[100%] flex flex-row justify-between items-center
+    @apply desktop:h-[9.0625rem] phone:h-fit  w-[100%] desktop:flex flex-row justify-between items-center phone:grid phone:grid-cols-2 tablet:grid tablet:grid-cols-3
 }
 
 .categories-box-child {
     border: 0.0625rem solid rgba(0, 0, 0, 0.3);
-    @apply h-[9.0625rem] w-[10.625rem] rounded-[0.25rem] flex flex-col justify-center items-center gap-[1rem] hover:bg-[#DB4444] hover:text-[white]
+    @apply phone:h-[6.0625rem] phone:w-[6.625rem] desktop:p-[2rem] phone:p-[0rem]  h-[9.0625rem] w-[10.625rem] rounded-[0.25rem] flex flex-col justify-center items-center gap-[1rem] phone:text-[0.8rem] hover:bg-[#DB4444] hover:text-[white] tablet:h-[9.0625rem] tablet:w-[10.625rem] tablet:flex tablet:items-center tablet:justify-center 
 }
 
 @media screen and (max-width: 767px) {
@@ -36,15 +36,15 @@
         @apply text-[2.25rem] font-semibold flex flex-row gap-[5.43rem] items-center mb-[3.75rem]
     }
     
-    .categories-box {
+    /* .categories-box {
         grid-template-columns: repeat(2, 1fr);
         @apply h-fit w-[100%] grid p-[2rem] gap-[1rem] pl-[5.5%]
-    }
+    } */
     
-    .categories-box-child {
+    /* .categories-box-child {
         border: 0.0625rem solid rgba(0, 0, 0, 0.3);
         @apply h-[6.0625rem] w-[6.625rem] rounded-[0.25rem] flex flex-col justify-center p-[0.5rem] items-center gap-[1rem] hover:bg-[#DB4444] hover:text-[white]
-    }
+    } */
 
     .cate{
         @apply p-[0rem]

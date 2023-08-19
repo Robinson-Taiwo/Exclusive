@@ -10,6 +10,8 @@ import Contact from './Contact'
 import Account from './Account'
 import ProductDetails from './ProductDetails'
 import NotFound from './NotFound'
+import Checkout from './Checkout'
+import Splash from './Splash'
 
 const AppRoutes = () => {
     return (
@@ -22,7 +24,9 @@ const AppRoutes = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/account" element={<Account />} />
-            <Route path="/products/:id" element={<ProductDetails />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/splashscreen" element={<Splash />} />
+            <Route path="/products/:ids" element={<ProductDetails />} />
             <Route path='/Notfound' element={<NotFound />} />
         </Routes>
     )
